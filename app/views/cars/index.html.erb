@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse ">
+        <tr class="row-head"> 
+          <th scope="col">Shop &#35</th>
+          <th scope="col">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Third Assignment</th>
+          <th scope="col">Fourth Assignment</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Image Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cars.each do |car| %>
+          <tr>
+            <th scope="row"><%= car.shop_num %></th>
+            <td><%= car.year %></td>
+            <td><%= car.make_model %></td>
+            <td><%= car.original_assign %></td>
+            <td><%= car.second_assign %></td>
+            <td><%= car.third_assign %></td>
+            <td><%= car.fourth_assign %></td>
+            <td><%= car.notes %></td>
+            <td><a href=<%= car.img_link %> target="_blank"><%= car.caption %></a>
+              <a href=<%= car.img_link_two %> target="_blank"><%= car.caption_two %></a>
+              <a href=<%= car.img_link_three %> target="_blank"><%= car.caption_three %></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

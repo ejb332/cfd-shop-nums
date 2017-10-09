@@ -5,3 +5,64 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# (1..544).each do |i|
+#   Car.create(
+#     shop_num: "A-#{i}",
+#     year: '19'
+#   )
+# end
+
+# (1..614).each do |i|
+#   Suv.create(
+#     shop_num: "B-#{i}",
+#     year: '19'
+#   )
+# end
+
+# (1..1250).each do |i|
+#   Ambulance.create(
+#     shop_num: "C-#{i}",
+#     year: '19'
+#   )
+# end
+
+# (1..653).each do |i|
+#   Engine.create(
+#     shop_num: "D-#{i}"
+#   )
+# end
+
+# (1..354).each do |i|
+#   Truck.create(
+#     shop_num: "E-#{i}",
+#     year: '19'
+#   )
+# end
+
+# (1..229).each do |i|
+#   Truck.create(
+#     shop_num: "F-#{i}",
+#     year: '19'
+#   )
+# end
+
+# (1..616).each do |i|
+#   Special.create(
+#     shop_num: "G-#{i}",
+#     year: '19'
+#   )
+# end
+
+# (1..32).each do |i|
+#   Steamer.create(
+#     shop_num: "H-#{i}",
+#     year: '19'
+#   )
+# end
+
+# (1..198).each do |i|
+#   Other.create(
+#     shop_num: "S-#{i}"
+#   )
+# end

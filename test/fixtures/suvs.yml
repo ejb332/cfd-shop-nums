@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shop_num: MyString
+  year: MyString
+  make_model: MyString
+  original_assign: MyString
+  second_assign: MyString
+  third_assign: MyString
+  notes: MyString
+  img_link: MyString
+
+two:
+  shop_num: MyString
+  year: MyString
+  make_model: MyString
+  original_assign: MyString
+  second_assign: MyString
+  third_assign: MyString
+  notes: MyString
+  img_link: MyString

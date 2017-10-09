@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse ">
+        <tr class="row-head">
+          <th scope="col">Shop &#35</th>
+          <th scope="col">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Third Assignment</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Image Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @suvs.each do |suv| %>
+          <tr>
+            <th scope="row"><%= suv.shop_num %></th>
+            <td><%= suv.year %></td>
+            <td><%= suv.make_model %></td>
+            <td><%= suv.original_assign %></td>
+            <td><%= suv.second_assign %></td>
+            <td><%= suv.third_assign %></td>
+            <td><%= suv.notes %></td>
+            <td><a href=<%= suv.img_link %> target="_blank"><%= suv.caption %></a>
+              <a href=<%= suv.img_link_two %> target="_blank"><%= suv.caption_two %></a>
+              <a href=<%= suv.img_link_three %> target="_blank"><%= suv.caption_three %></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
