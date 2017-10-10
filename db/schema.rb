@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171009035039) do
+ActiveRecord::Schema.define(version: 20171010181232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,6 +100,10 @@ ActiveRecord::Schema.define(version: 20171009035039) do
     t.string   "caption_four"
     t.string   "img_link_five"
     t.string   "caption_five"
+    t.string   "img_link_six"
+    t.string   "caption_six"
+    t.string   "img_link_seven"
+    t.string   "caption_seven"
   end
 
   create_table "identifications", force: :cascade do |t|
@@ -112,6 +116,20 @@ ActiveRecord::Schema.define(version: 20171009035039) do
     t.string   "img_link"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "caption"
+  end
+
+  create_table "insurances", force: :cascade do |t|
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "shop_num"
+    t.string   "year"
+    t.string   "make_model"
+    t.string   "original_assign"
+    t.string   "second_assign"
+    t.string   "img_link"
+    t.string   "caption"
+    t.string   "notes"
   end
 
   create_table "mains", force: :cascade do |t|
@@ -145,6 +163,24 @@ ActiveRecord::Schema.define(version: 20171009035039) do
     t.string   "img_link"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "caption"
+  end
+
+  create_table "pres", force: :cascade do |t|
+    t.string   "shop_num"
+    t.string   "year"
+    t.string   "make_model"
+    t.string   "gpm"
+    t.string   "original_assign"
+    t.string   "second_assign"
+    t.string   "img_link"
+    t.string   "caption"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "notes"
+    t.string   "third_assign"
+    t.string   "fourth_assign"
+    t.string   "fifth_assign"
   end
 
   create_table "specials", force: :cascade do |t|

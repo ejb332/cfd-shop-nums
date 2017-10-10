@@ -66,3 +66,17 @@
 #     shop_num: "S-#{i}"
 #   )
 # end
+
+# (1..54).each do |i|
+#   Insurance.create(
+#     shop_num: "B-#{i}"
+#   )
+# end
+
+# 54.times do
+#   Pre.create
+# end
+
+# 54.times do
+#   Airport.create
+# end

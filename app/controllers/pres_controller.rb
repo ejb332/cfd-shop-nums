@@ -1,0 +1,2 @@
+class PresController < ApplicationController
+end

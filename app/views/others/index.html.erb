@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse ">
+        <tr class="row-head">
+          <th scope="col">Shop &#35</th>
+          <th scope="col">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Third Assignment</th>
+          <th scope="col">Fourth Assignment</th>
+          <th scope="col">Fifth Assignment</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Image Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @others.each do |other| %>
+          <tr>
+            <th scope="row"><%= other.shop_num %></th>
+            <td><%= other.year %></td>
+            <td><%= other.make_model %></td>
+            <td><%= other.original_assign %></td>
+            <td><%= other.second_assign %></td>
+            <td><%= other.third_assign %></td>
+            <td><%= other.fourth_assign %></td>
+            <td><%= other.fifth_assign %></td>
+            <td><%= other.notes %></td>
+            <td><a href=<%= other.img_link %> target="_blank"><%= other.caption %></a>
+              <a href=<%= other.img_link_two %> target="_blank"><%= other.caption_two %></a>
+              <a href=<%= other.img_link_three %> target="_blank"><%= other.caption_three %></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

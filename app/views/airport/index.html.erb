@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse ">
+        <tr class="row-head">
+          <th scope="col">Shop &#35</th>
+          <th scope="col">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Third Assignment</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Image Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @airports.each do |airport| %>
+          <tr>
+            <th scope="row"><%= airport.shop_num %></th>
+            <td><%= airport.year %></td>
+            <td><%= airport.make_model %></td>
+            <td><%= airport.original_assign %></td>
+            <td><%= airport.second_assign %></td>
+            <td><%= airport.third_assign %></td>
+            <td><%= airport.fourth_assign %></td>
+            <td><%= airport.notes %></td>
+            <td><a href=<%= airport.img_link %> target="_blank"><%= airport.caption %></a>
+              <a href=<%= airport.img_link_two %> target="_blank"><%= airport.caption_two %></a>
+              <a href=<%= airport.img_link_three %> target="_blank"><%= airport.caption_three %></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

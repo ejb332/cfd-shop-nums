@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse ">
+        <tr class="row-head">
+          <th scope="col">Shop &#35</th>
+          <th scope="col">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Third Assignment</th>
+          <th scope="col">Fourth Assignment</th>
+          <th scope="col">Fifth Assignment</th>
+          <th scope="col">Sixth Assignment</th>
+          <th scope="col">Seventh Assignment</th>
+          <th scope="col">Eighth Assignment</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Image Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @specials.each do |special| %>
+          <tr>
+            <th scope="row"><%= special.shop_num %></th>
+            <td><%= special.year %></td>
+            <td><%= special.make_model %></td>
+            <td><%= special.original_assign %></td>
+            <td><%= special.second_assign %></td>
+            <td><%= special.third_assign %></td>
+            <td><%= special.fourth_assign %></td>
+            <td><%= special.fifth_assign %></td>
+            <td><%= special.sixth_assign %></td>
+            <td><%= special.seventh_assign %></td>
+            <td><%= special.eighth_assign %></td>
+            <td><%= special.notes %></td>
+            <td><a href=<%= special.img_link %> target="_blank"><%= special.caption %></a>
+              <a href=<%= special.img_link_two %> target="_blank"><%= special.caption_two %></a>
+              <a href=<%= special.img_link_three %> target="_blank"><%= special.caption_three %></a>
+              <a href=<%= special.img_link_four %> target="_blank"><%= special.caption_four %></a>
+              <a href=<%= special.img_link_five %> target="_blank"><%= special.caption_five %></a>
+              <a href=<%= special.img_link_six %> target="_blank"><%= special.caption_six %></a>
+              <a href=<%= special.img_link_seven %> target="_blank"><%= special.caption_seven %></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
