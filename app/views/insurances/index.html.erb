@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse ">
+        <tr class="row-head">
+          <th scope="col">Shop &#35</th>
+          <th scope="col">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Image Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @insurances.each do |insurance| %>
+          <tr>
+            <th scope="row"><%= insurance.shop_num %></th>
+            <td><%= insurance.year %></td>
+            <td><%= insurance.make_model %></td>
+            <td><%= insurance.original_assign %></td>
+            <td><%= insurance.second_assign %></td>
+            <td><%= insurance.notes %></td>
+            <td><a href=<%= insurance.img_link %> target="_blank"><%= insurance.caption %></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

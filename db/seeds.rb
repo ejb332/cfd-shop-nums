@@ -76,7 +76,3 @@
 # 54.times do
 #   Pre.create
 # end
-
-# 54.times do
-#   Airport.create
-# end

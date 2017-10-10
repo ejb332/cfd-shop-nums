@@ -9,23 +9,25 @@
           <th scope="col">Original Assignment</th>
           <th scope="col">Second Assignment</th>
           <th scope="col">Third Assignment</th>
+          <th scope="col">Fourth Assignment</th>
+          <th scope="col">Fifth Assignment</th>
           <th scope="col">Notes</th>
           <th scope="col">Image Links</th>
         </tr>
       </thead>
       <tbody>
-        <% @others.each do |other| %>
+        <% @pres.each do |pre| %>
           <tr>
-            <th scope="row"><%= other.shop_num %></th>
-            <td><%= other.year %></td>
-            <td><%= other.make_model %></td>
-            <td><%= other.original_assign %></td>
-            <td><%= other.second_assign %></td>
-            <td><%= other.third_assign %></td>
-            <td><%= other.notes %></td>
-            <td><a href=<%= other.img_link %> target="_blank"><%= other.caption %></a>
-              <a href=<%= other.img_link_two %> target="_blank"><%= other.caption_two %></a>
-              <a href=<%= other.img_link_three %> target="_blank"><%= other.caption_three %></a>
+            <th scope="row"><%= pre.shop_num %></th>
+            <td><%= pre.year %></td>
+            <td><%= pre.make_model %></td>
+            <td><%= pre.original_assign %></td>
+            <td><%= pre.second_assign %></td>
+            <td><%= pre.third_assign %></td>
+            <td><%= pre.fourth_assign %></td>
+            <td><%= pre.fifth_assign %></td>
+            <td><%= pre.notes %></td>
+            <td><a href=<%= pre.img_link %> target="_blank"><%= pre.caption %></a>
             </td>
           </tr>
         <% end %>

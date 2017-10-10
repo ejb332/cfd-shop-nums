@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/g-series' => 'specials#index'
   get '/h-series' => 'steamers#index'
   get '/s-series' => 'others#index'
+  get '/fip' => 'insurances#index'
   get '/unidentified' => 'identifications#index'
   get '/former' => 'pasts#index'
+  get '/pre-shop' => 'pres#index'
 end

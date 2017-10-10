@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171010181232) do
+ActiveRecord::Schema.define(version: 20171010205830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,9 +24,19 @@ ActiveRecord::Schema.define(version: 20171010181232) do
     t.string   "second_assign"
     t.string   "third_assign"
     t.string   "notes"
-    t.string   "img_Link"
+    t.string   "img_link"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "caption"
+    t.string   "img_link_two"
+    t.string   "caption_two"
+    t.string   "img_link_three"
+    t.string   "caption_three"
+    t.string   "img_link_four"
+    t.string   "caption_four"
+    t.string   "img_link_five"
+    t.string   "caption_five"
+    t.string   "fourth_assign"
   end
 
   create_table "ambulances", force: :cascade do |t|
@@ -151,6 +161,11 @@ ActiveRecord::Schema.define(version: 20171010181232) do
     t.string   "img_link"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "caption"
+    t.string   "img_link_two"
+    t.string   "caption_two"
+    t.string   "img_link_three"
+    t.string   "caption_three"
   end
 
   create_table "pasts", force: :cascade do |t|
@@ -198,8 +213,33 @@ ActiveRecord::Schema.define(version: 20171010181232) do
     t.string   "eighth_assign"
     t.string   "notes"
     t.string   "img_link"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "caption"
+    t.string   "img_link_two"
+    t.string   "caption_two"
+    t.string   "img_link_three"
+    t.string   "caption_three"
+    t.string   "img_link_four"
+    t.string   "caption_four"
+    t.string   "img_link_five"
+    t.string   "caption_five"
+    t.string   "img_link_six"
+    t.string   "caption_six"
+    t.string   "img_link_seven"
+    t.string   "caption_seven"
+    t.string   "img_link_eight"
+    t.string   "caption_eight"
+    t.string   "img_link_nine"
+    t.string   "caption_nine"
+    t.string   "img_link_ten"
+    t.string   "caption_ten"
+    t.string   "img_link_eleven"
+    t.string   "caption_eleven"
+    t.string   "img_link_twelve"
+    t.string   "caption_twelve"
+    t.string   "img_link_thirteen"
+    t.string   "caption_thirteen"
   end
 
   create_table "steamers", force: :cascade do |t|
@@ -251,6 +291,19 @@ ActiveRecord::Schema.define(version: 20171010181232) do
     t.string   "img_link"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "caption"
+    t.string   "img_link_two"
+    t.string   "caption_two"
+    t.string   "img_link_three"
+    t.string   "caption_three"
+    t.string   "img_link_four"
+    t.string   "caption_four"
+    t.string   "img_link_five"
+    t.string   "caption_five"
+    t.string   "img_link_six"
+    t.string   "caption_six"
+    t.string   "img_link_seven"
+    t.string   "caption_seven"
   end
 
 end
