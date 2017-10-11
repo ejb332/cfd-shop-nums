@@ -16,7 +16,7 @@
 
 * {
   box-sizing: border-box;
-  /* border: 1px solid red !important; */
+   border: 1px solid red !important; 
 }
 
 html {
@@ -28,6 +28,7 @@ body {
   max-width: 100%;
   font-family: sans-serif;
   line-height: normal;
+  margin: 0 auto;
 }
 
 embed {
@@ -47,6 +48,7 @@ img {
   -ms-flex: wrap;
   -o-flex: wrap;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .col-1 {
@@ -130,16 +132,16 @@ nav.open {
   transform: translate(0, 0);
 }
 
+a:hover {
+  border-color: black gold red gold;
+}
+
 a:link, a:visited {
   margin: 0px 2px;
   text-align: center;
   display: inline-block;
   border-radius: 5px;
   text-decoration: none;
-}
-
-a:hover {
-  border-color: black gold red gold;
 }
 
 p {
@@ -165,6 +167,8 @@ footer {
   color: black;
 }
 
+.btn:hover
+
 .text-center {
   text-align: center;
 }
@@ -175,6 +179,15 @@ footer {
 
 #search-query {
   padding: 0;
+}
+
+.main-first {
+  justify-content: ;
+}
+
+.main-second {
+  margin-top: 20px;
+  align-items: space-around;
 }
 
 .mouseover {
@@ -244,12 +257,6 @@ a:visited {
 .thead-inverse {
   table-layout: fixed;
   border-collapse: collapse;
-}
-
-#FIP {
-  background-color: red;
-  color: #e3ce00;
-  border: 2px solid black;
 }
 
 @media only screen and (max-width: 450px) {
