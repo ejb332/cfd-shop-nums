@@ -16,8 +16,8 @@
 
 * {
   box-sizing: border-box;
-   border: 1px solid red !important; 
-}
+/*   border: 1px solid red !important;
+*/}
 
 html {
   width: 100%;
@@ -101,6 +101,10 @@ img {
 
 .pg-title {
   font-size: 2em;
+}
+
+.series-head {
+  text-align: center;
 }
 
 ul {
@@ -240,6 +244,10 @@ tbody tr:nth-child(odd) {
   background: #eee;
 }
 
+/*tbody tr:hover {
+  background: #e3ce00;
+}*/
+
 td, th {
   padding: 0.5em;
   text-align: center;
@@ -253,6 +261,7 @@ a:link {
 a:visited {
   color: black;
 }
+
 
 .thead-inverse {
   table-layout: fixed;
