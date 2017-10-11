@@ -193,6 +193,65 @@ footer {
   position: relative;
 }
 
+table {
+  border-collapse: collapse;
+  font: sans-serif;
+  border-bottom: 2px solid #e3ce00;
+  table-layout: fixed;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+thead {
+  background-color: red;
+  color: #e3ce00;
+  border: 2px solid black;
+  /* sticky only supported in safari currently. go figure */
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  top: -1px;
+  /* this will fix the header, but not spaced how I want it
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin: 0 auto;
+  */
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+td, th {
+  padding: 0.5em;
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+  color: red;
+}
+
+a:visited {
+  color: black;
+}
+
+.thead-inverse {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#FIP {
+  background-color: red;
+  color: #e3ce00;
+  border: 2px solid black;
+}
+
 @media only screen and (max-width: 450px) {
 
 }

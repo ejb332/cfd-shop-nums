@@ -9,13 +9,6 @@
   </head>
 
   <body>
-    <%= form_tag('/b-series', :method => 'get', id:'search-form') do %>
-      <%= text_field_tag :search, params[:search], placeholder: 'Search Shop Numbers' %>
-      <%= submit_tag 'Search', :name => nil %>
-    <% end %>
-    <% if @ambulances.blank? %>
-      <h4>There are no shop records matching your query <%= params[:search] %></h4>
-    <% end %>
     <%= yield %>
   </body>
 </html>
