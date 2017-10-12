@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/cfd' => 'mains#index'
+  root 'mains#index'
   get '/a-series' => 'cars#index'
   get '/avf-series' => 'airport#index'
   get '/b-series' => 'su_vs#index'
