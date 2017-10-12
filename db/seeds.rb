@@ -76,3 +76,11 @@
 # 54.times do
 #   Pre.create
 # end
+
+# 24.times do
+#   Identification.create
+# end
+
+10.times do
+  Unclassifiable.create
+end

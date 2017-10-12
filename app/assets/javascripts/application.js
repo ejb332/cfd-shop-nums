@@ -67,6 +67,10 @@ $(document).ready(function() {
     $('#former-drop').slideToggle(800);
   });
 
+  $('#unclass').hover(function() {
+    $('#unclass-drop').slideToggle(800);
+  });
+
   $('#unid').hover(function() {
     $('#unid-drop').slideToggle(800);
   });

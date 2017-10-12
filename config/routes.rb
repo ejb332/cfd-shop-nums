@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/unidentified' => 'identifications#index'
   get '/former' => 'pasts#index'
   get '/pre-shop' => 'pres#index'
+  get '/unclassified' => 'unclassifiables#index'
 end

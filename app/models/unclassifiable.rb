@@ -1,0 +1,2 @@
+class Unclassifiable < ApplicationRecord
+end

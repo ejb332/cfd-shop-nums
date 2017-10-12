@@ -1,0 +1,37 @@
+<div class="container series-head">
+  <h1>Mixed Bag</h1>
+  <p>Shop vehicles (a different S- series than the identically-named current one), outboard boat motors, a trailer pump, and the 5-11 Club.</p>
+</div>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse ">
+        <tr class="row-head">
+          <th scope="col">Shop &#35</th>
+          <th scope="col">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Image Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @unclassifiables.each do |unclassifiable| %>
+          <tr>
+            <th scope="row"><%= unclassifiable.shop_num %></th>
+            <td><%= unclassifiable.year %></td>
+            <td><%= unclassifiable.make_model %></td>
+            <td><%= unclassifiable.original_assign %></td>
+            <td><%= unclassifiable.second_assign %></td>
+            <td><%= unclassifiable.notes %></td>
+            <td><a href=<%= unclassifiable.img_link %> target="_blank"><%= unclassifiable.caption %></a>
+              <a href=<%= unclassifiable.img_link_two %> target="_blank"><%= unclassifiable.caption_two %></a>
+              <a href=<%= unclassifiable.img_link_three %> target="_blank"><%= unclassifiable.caption_three %></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
