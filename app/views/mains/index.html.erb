@@ -13,6 +13,11 @@
   </head>
   <body>
     <div ng-app="app">
+      <div ng-controller="testCtrl">
+        <p>{{ testMessage }}</p>
+        <input type="text" ng-model="testMessage">
+      </div>
+    </div>
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -38,7 +43,7 @@
               <li id="e"><a href="e-f-series" class="btn-default">E- &#38 F- series</a></li>
               <li id="g"><a href="g-series" class="btn-default">G- series</a></li>
               <li id="h"><a href="h-series" class="btn-default">H- series</a></li>
-              <li id="s"><a href="s-series" class="btn-default">S- series &#38 misc.</a></li>
+              <li id="s"><a href="s-series" class="btn-default">S- series</a></li>
             </ul>
             <ul class="main-second">
                <li id="pre"><a href="pre-shop" class="btn-default">Pre-1923</a></li>
@@ -85,6 +90,7 @@
         </footer>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous">
+    </script>
   </body>
 </html>
