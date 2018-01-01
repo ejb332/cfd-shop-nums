@@ -261,10 +261,6 @@ a:visited {
   border-collapse: collapse;
 }
 
-@media only screen and (max-width: 450px) {
-
-}
-
 @media only screen and (max-width: 749px) {
   nav {
     display: none;
@@ -283,5 +279,12 @@ a:visited {
 @media only screen and (min-width: 750px) and (max-width: 1328px) {
   .btn-default {
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+  th, td {
+    width: 150px;
+    overflow: scroll;
   }
 }
