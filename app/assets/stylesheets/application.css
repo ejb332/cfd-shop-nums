@@ -38,6 +38,7 @@ embed {
 img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .row {
@@ -287,4 +288,9 @@ a:visited {
     width: 150px;
     overflow: scroll;
   }
+
+  .btn-default {
+    margin: auto;
+  }
+
 }
