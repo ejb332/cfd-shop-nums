@@ -78,7 +78,6 @@ $(document).ready(function() {
   });
 
   $('.fa-bars').click(function() {
-    var btns = $('.btn-default').show();
-    $('.fa-bars::after').append(btns);
+    const navMobile = $('#nav').toggle(400);
   });
 });
