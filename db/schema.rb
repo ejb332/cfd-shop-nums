@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012052201) do
+ActiveRecord::Schema.define(version: 20180131013308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "img_link_five"
     t.string   "caption_five"
     t.string   "fourth_assign"
+    t.string   "quarters"
   end
 
   create_table "ambulances", force: :cascade do |t|
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_three"
     t.string   "img_link_four"
     t.string   "caption_four"
+    t.string   "quarters"
   end
 
   create_table "cars", force: :cascade do |t|
@@ -82,6 +84,12 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_two"
     t.string   "img_link_three"
     t.string   "caption_three"
+    t.string   "quarters"
+    t.string   "fifth_assign"
+    t.string   "sixth_assign"
+    t.string   "seventh_assign"
+    t.string   "eighth_assign"
+    t.string   "ninth_assign"
   end
 
   create_table "engines", force: :cascade do |t|
@@ -114,6 +122,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_six"
     t.string   "img_link_seven"
     t.string   "caption_seven"
+    t.string   "quarters"
   end
 
   create_table "identifications", force: :cascade do |t|
@@ -131,6 +140,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_two"
     t.string   "img_link_three"
     t.string   "caption_three"
+    t.string   "quarters"
   end
 
   create_table "insurances", force: :cascade do |t|
@@ -144,11 +154,13 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "img_link"
     t.string   "caption"
     t.string   "notes"
+    t.string   "quarters"
   end
 
   create_table "mains", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "quarters"
   end
 
   create_table "others", force: :cascade do |t|
@@ -170,6 +182,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_two"
     t.string   "img_link_three"
     t.string   "caption_three"
+    t.string   "quarters"
   end
 
   create_table "pasts", force: :cascade do |t|
@@ -200,6 +213,12 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "third_assign"
     t.string   "fourth_assign"
     t.string   "fifth_assign"
+    t.string   "quarters"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "specials", force: :cascade do |t|
@@ -244,6 +263,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_twelve"
     t.string   "img_link_thirteen"
     t.string   "caption_thirteen"
+    t.string   "quarters"
   end
 
   create_table "steamers", force: :cascade do |t|
@@ -257,6 +277,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "caption"
+    t.string   "quarters"
   end
 
   create_table "suvs", force: :cascade do |t|
@@ -275,6 +296,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_two"
     t.string   "img_link_three"
     t.string   "caption_three"
+    t.string   "quarters"
   end
 
   create_table "trucks", force: :cascade do |t|
@@ -308,6 +330,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_six"
     t.string   "img_link_seven"
     t.string   "caption_seven"
+    t.string   "quarters"
   end
 
   create_table "unclassifiables", force: :cascade do |t|
@@ -325,6 +348,7 @@ ActiveRecord::Schema.define(version: 20171012052201) do
     t.string   "caption_two"
     t.string   "img_link_three"
     t.string   "caption_three"
+    t.string   "quarters"
   end
 
 end

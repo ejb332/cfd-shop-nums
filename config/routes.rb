@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get '/former' => 'pasts#index'
   get '/pre-shop' => 'pres#index'
   get '/unclassified' => 'unclassifiables#index'
+  post '/search' => 'mains#search_landing'
 end

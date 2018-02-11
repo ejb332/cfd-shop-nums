@@ -35,6 +35,22 @@
         </div>
         <i class="fa fa-bars" aria-hidden="true"></i>
         <hr>
+        <div class="mouseover">
+          <p class="hoverbox" id="a-drop">Sedans</p>
+          <p class="hoverbox" id="avf-drop">Airport</p>
+          <p class="hoverbox" id="b-drop">Coupes, Wagons, SUVs</p>
+          <p class="hoverbox" id="c-drop">Ambulances and Early Squads</p>
+          <p class="hoverbox" id="d-drop">Engines</p>
+          <p class="hoverbox" id="e-drop">Trucks and Trailers</p>
+          <p class="hoverbox" id="g-drop">Squads, Snorkels, and Special Equipment</p>
+          <p class="hoverbox" id="h-drop">Reserve Steam Engines (1920s)</p>
+          <p class="hoverbox" id="s-drop">Additional Special Equipment</p>
+          <p class="hoverbox" id="pre-drop">Vehicles Predating Numbering Program</p>
+          <p class="hoverbox" id="fip-drop">Chicago Fire Insurance Patrol</p>
+          <p class="hoverbox" id="former-drop">Vehicles transferred to other departments</p>
+          <p class="hoverbox" id="unclass-drop">Singular vehicles</p>
+          <p class="hoverbox" id="unid-drop">Shop numbers yet to be identified</p>
+        </div>
         <div class="row" id="main-buttons">
           <nav id="nav" class="col-12">
             <ul class="main-first">
@@ -55,22 +71,6 @@
               <li id="unclass"><a href="unclassified" class="btn-default">Unclassified</a></li>
               <li id="unid"><a href="unidentified" class="btn-default">Unidentified</a></li>
             </ul>
-            <div class="mouseover">
-              <p class="hoverbox" id="a-drop">Sedans</p>
-              <p class="hoverbox" id="avf-drop">Airport</p>
-              <p class="hoverbox" id="b-drop">Coupes, Wagons, SUVs</p>
-              <p class="hoverbox" id="c-drop">Ambulances and Early Squads</p>
-              <p class="hoverbox" id="d-drop">Engines</p>
-              <p class="hoverbox" id="e-drop">Trucks and Trailers</p>
-              <p class="hoverbox" id="g-drop">Squads, Snorkels, and Special Equipment</p>
-              <p class="hoverbox" id="h-drop">Reserve Steam Engines</p>
-              <p class="hoverbox" id="s-drop">Additional Special Equipment</p>
-              <p class="hoverbox" id="pre-drop">Vehicles Predating Numbering Program</p>
-              <p class="hoverbox" id="fip-drop">Chicago Fire Insurance Patrol</p>
-              <p class="hoverbox" id="former-drop">Vehicles transferred to other departments</p>
-              <p class="hoverbox" id="unclass-drop">Singular vehicles</p>
-              <p class="hoverbox" id="unid-drop">Shop numbers yet to be identified</p>
-            </div>
           </nav>
         </div>
         <div class="row">
@@ -81,15 +81,20 @@
         </div>
         <div class="row">
           <div class="col-12 text-center">
-            <input type="search" name="search" placeholder="Search Shop Numbers"/>
-            <input type="submit" name="submit">
+            <%= form_tag "/search", method: :post do %>
+              <%= label_tag :search %>
+              <%= text_field_tag :search %>
+              <%= submit_tag "Search" %>
+            <% end %>
+<!--             <input type="search" name="search" placeholder="Search Shop Numbers"/>
+            <input type="submit" name="submit"> -->
           </div>
         </div>
         </div>
         <hr>
         <footer>
           <div class="col-12">
-            <p class="text-right">An Eric Biel project, 2016-2017</p>
+            <p class="text-right">An Eric Biel project, 2016-201</p>
           </div>
         </footer>
       </div>

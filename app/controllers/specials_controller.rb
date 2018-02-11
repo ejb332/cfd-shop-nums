@@ -8,4 +8,10 @@ class SpecialsController < ApplicationController
     # end
     render 'index.html.erb'
   end
+
+  def search
+    search_term = params[:search]
+    @specials = Special.where('shop_num LIKE ?', '%' + search_term + '%')
+    render 'index.html.erb'
+  end
 end

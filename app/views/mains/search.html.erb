@@ -1,0 +1,36 @@
+<h1>Search Results</h1>
+
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse ">
+        <tr class="row-head">
+          <th scope="col">Shop &#35</th>
+          <th scope="col">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Third Assignment</th>
+          <th scope="col">Fourth Assignment</th>
+          <th scope="col">Photos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @search_table.each do |search_item|  %>
+          <tr>
+            <th scope="row"><%= search_table.shop_num %></th>
+            <td><%= search_table.year %></td>
+            <td><%= search_table.make_model %></td>
+            <td><%= search_table.original_assign %></td>
+            <td><%= search_table.second_assign %></td>
+            <td><%= search_table.third_assign %></td>
+            <td><%= search_table.fourth_assign %></td>
+            <td><a href=<%= search_table.img_link %> target="_blank"><%= search_table.caption %></a>
+                <a href=<%= search_table.img_link_two %> target="_blank"><%= search_table.caption_two %></a>
+                <a href=<%= search_table.img_link_three %> target="_blank"><%= search_table.caption_three %></a>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
