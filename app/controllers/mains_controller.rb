@@ -5,19 +5,41 @@ class MainsController < ApplicationController
 
   def search_landing
     search_term = params[:search].upcase
-    @search_table = nil
+    @search_tables = nil
 
+    # works - refactor to case statement
     if search_term.start_with?('A')
       @cars = Car.where('shop_num = ?', "#{search_term}")
-      @search_table = @cars
+      @search_tables = @cars
+    elsif search_term.start_with?('B')
+      @suvs = Suv.where('shop_num = ?', "#{search_term}")
+      @search_tables = @suvs
+    elsif search_term.start_with?('C')
+      @ambulances = Ambulance.where('shop_num = ?', "#{search_term}")
+      @search_tables = @ambulances
     elsif search_term.start_with?('D')
       @engines = Engine.where('shop_num = ?', "#{search_term}")
-      @search_table = @engines
+      @search_tables = @engines
+    elsif search_term.start_with?('E', 'F')
+      @trucks = Truck.where('shop_num = ?', "#{search_term}")
+      @search_tables = @trucks
     elsif search_term.start_with?('G')
       @specials = Special.where('shop_num = ?', "#{search_term}")
-      @search_table = @specials
+      @search_tables = @specials
+    elsif search_term.start_with?('H')
+      @steamers = Steamer.where('shop_num = ?', "#{search_term}")
+      @search_tables = @steamers
+    elsif search_term.start_with?('S')
+      @others = Other.where('shop_num = ?', "#{search_term}")
+      @search_tables = @others
+    # elsif search_term.start_with?('CPD', 'EC', 'FM')
+    #   @unclassifiables = Unclassifiable.where('shop_num = ?', "#{search_term}")
+    #   @search_tables = @unclassifiables
+    elsif search_term.include? 'none'
+
+      @search_tables = @pres
     else
-      "No results found for #{search_term}"
+      @search_tables
     end
     render 'search.html.erb'
   end
