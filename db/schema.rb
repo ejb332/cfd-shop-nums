@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131013308) do
+ActiveRecord::Schema.define(version: 20180307180035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,8 @@ ActiveRecord::Schema.define(version: 20180131013308) do
     t.string   "seventh_assign"
     t.string   "eighth_assign"
     t.string   "ninth_assign"
+    t.string   "img_link_four"
+    t.string   "caption_four"
   end
 
   create_table "engines", force: :cascade do |t|
@@ -278,6 +280,8 @@ ActiveRecord::Schema.define(version: 20180131013308) do
     t.datetime "updated_at",      null: false
     t.string   "caption"
     t.string   "quarters"
+    t.string   "second_assign"
+    t.string   "third_assign"
   end
 
   create_table "suvs", force: :cascade do |t|
@@ -297,6 +301,10 @@ ActiveRecord::Schema.define(version: 20180131013308) do
     t.string   "img_link_three"
     t.string   "caption_three"
     t.string   "quarters"
+    t.string   "fourth_assign"
+    t.string   "fifth_assign"
+    t.string   "sixth_assign"
+    t.string   "seventh_assign"
   end
 
   create_table "trucks", force: :cascade do |t|
@@ -350,5 +358,4 @@ ActiveRecord::Schema.define(version: 20180131013308) do
     t.string   "caption_three"
     t.string   "quarters"
   end
-
 end

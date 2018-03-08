@@ -7,7 +7,7 @@ class MainsController < ApplicationController
     search_term = params[:search].upcase
     @search_tables = nil
 
-    # works - refactor to case statement
+    # mostly works - refactor to case statement
     if search_term.start_with?('A')
       @cars = Car.where('shop_num = ?', "#{search_term}")
       @search_tables = @cars
@@ -36,7 +36,6 @@ class MainsController < ApplicationController
     #   @unclassifiables = Unclassifiable.where('shop_num = ?', "#{search_term}")
     #   @search_tables = @unclassifiables
     elsif search_term.include? 'none'
-
       @search_tables = @pres
     else
       @search_tables
