@@ -8,7 +8,10 @@ class MainsController < ApplicationController
     @search_tables = nil
 
     # mostly works - refactor to case statement
-    if search_term.start_with?('A')
+    if search_term.start_with?('AVF')
+      @airports = Airport.where('shop_num = ?', "#{search_term}")
+      @search_tables = @airports
+    elsif search_term.start_with?('A')
       @cars = Car.where('shop_num = ?', "#{search_term}")
       @search_tables = @cars
     elsif search_term.start_with?('B')
@@ -35,10 +38,11 @@ class MainsController < ApplicationController
     # elsif search_term.start_with?('CPD', 'EC', 'FM')
     #   @unclassifiables = Unclassifiable.where('shop_num = ?', "#{search_term}")
     #   @search_tables = @unclassifiables
-    elsif search_term.include? 'none'
-      @search_tables = @pres
+    # elsif search_term.include? 'none'
+    #   @pres = Pre.where('shop_num = ?', "#{search_term}")
+    #   @search_tables = @pres
     else
-      @search_tables
+      render 'search.html.erb'
     end
     render 'search.html.erb'
   end

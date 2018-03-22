@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'mains#index'
   get '/a-series' => 'cars#index'
+  get '/a-series/:id' => 'cars#show'
   get '/avf-series' => 'airport#index'
   get '/b-series' => 'su_vs#index'
   get '/c-series' => 'ambulances#index'
