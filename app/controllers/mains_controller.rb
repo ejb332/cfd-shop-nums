@@ -6,7 +6,9 @@ class MainsController < ApplicationController
   def search_landing
     search_term = params[:search].upcase
     @search_tables = nil
-
+    if search_term[1] != '-'
+      search_term.insert(1, '-')
+    end
     # mostly works - refactor to case statement
     if search_term.start_with?('AVF')
       @airports = Airport.where('shop_num = ?', "#{search_term}")
