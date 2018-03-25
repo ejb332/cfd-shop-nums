@@ -1,11 +1,12 @@
 class OthersController < ApplicationController
   def index
     @others = Other.all.order(id: :asc)
-    # if params[:search]
-    #   @others = Other.search(params[:search]).order('shop_num DESC')
-    # else
-    #   @others = Other.all.order('shop_num DESC')
-    # end
     render 'index.html.erb'
+  end
+
+  def show
+    db_id = params[:id]
+    @other = Other.find_by(id: db_id)
+    render 'show.html.erb'
   end
 end

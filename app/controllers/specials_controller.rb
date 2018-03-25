@@ -1,17 +1,12 @@
 class SpecialsController < ApplicationController
   def index
     @specials = Special.all.order(id: :asc)
-    # if params[:search]
-    #   @specials = Special.search(params[:search]).order('shop_num DESC')
-    # else
-    #   @specials = Special.all.order('shop_num DESC')
-    # end
     render 'index.html.erb'
   end
 
-  def search
-    search_term = params[:search]
-    @specials = Special.where('shop_num LIKE ?', '%' + search_term + '%')
-    render 'index.html.erb'
+  def show
+    db_id = params[:id]
+    @special = Special.find_by(id: db_id)
+    render 'show.html.erb'
   end
 end

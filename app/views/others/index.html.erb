@@ -21,7 +21,7 @@
       <tbody>
         <% @others.each do |other| %>
           <tr>
-            <th scope="row"><%= other.shop_num %></th>
+            <th scope="row"><a href="/s-series/<%= other.id %>"><%= other.shop_num %></a></th>
             <td><%= other.year %></td>
             <td><%= other.make_model %></td>
             <td><%= other.original_assign %></td>

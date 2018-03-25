@@ -21,7 +21,7 @@
       <tbody>
         <% @trucks.each do |truck| %>
           <tr>
-            <th scope="row"><%= truck.shop_num %></th>
+            <th scope="row"><a href="/e-f-series/<%= truck.id %>"><%= truck.shop_num %></a></th>
             <td><%= truck.year %></td>
             <td><%= truck.make_model %></td>
             <td><%= truck.original_assign %></td>

@@ -20,7 +20,7 @@
       <tbody>
         <% @unclassifiables.each do |unclassifiable| %>
           <tr>
-            <th scope="row"><%= unclassifiable.shop_num %></th>
+            <th scope="row"><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.shop_num %></a></th>
             <td><%= unclassifiable.year %></td>
             <td><%= unclassifiable.make_model %></td>
             <td><%= unclassifiable.original_assign %></td>

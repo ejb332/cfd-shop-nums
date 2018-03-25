@@ -19,7 +19,7 @@
       <tbody>
         <% @steamers.each do |steamer| %>
           <tr>
-            <th scope="row"><%= steamer.shop_num %></th>
+            <th scope="row"><a href="/h-series/<%= steamer.id %>"><%= steamer.shop_num %></a></th>
             <td><%= steamer.year %></td>
             <td><%= steamer.make_model %></td>
             <td><%= steamer.original_assign %></td>

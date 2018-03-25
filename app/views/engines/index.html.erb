@@ -21,7 +21,7 @@
       <tbody>
         <% @engines.each do |engine| %>
           <tr>
-            <th scope="row"><%= engine.shop_num %></th>
+            <th scope="row"><a href="/d-series/<%= engine.id %>"><%= engine.shop_num %></a></th>
             <td><%= engine.year %></td>
             <td><%= engine.make_model %></td>
             <td><%= engine.original_assign %></td>

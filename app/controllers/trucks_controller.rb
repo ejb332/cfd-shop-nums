@@ -1,11 +1,12 @@
 class TrucksController < ApplicationController
   def index
     @trucks = Truck.all.order(id: :asc)
-    # if params[:search]
-    #   @trucks = Truck.search(params[:search]).order('shop_num DESC')
-    # else
-    #   @trucks = Truck.all.order('shop_num DESC')
-    # end
     render 'index.html.erb'
+  end
+
+  def show
+    db_id = params[:id]
+    @truck = Truck.find_by(id: db_id)
+    render 'show.html.erb'
   end
 end

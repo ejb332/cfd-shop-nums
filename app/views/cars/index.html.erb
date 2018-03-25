@@ -22,7 +22,7 @@
       <tbody>
         <% @cars.each do |car| %>
           <tr>
-            <th scope="row"><%= car.shop_num %></th>
+            <th scope="row"><a href="/a-series/<%= car.id %>"><%= car.shop_num %></a></th>
             <td><%= car.year %></td>
             <td><%= car.make_model %></td>
             <td><%= car.original_assign %></td>

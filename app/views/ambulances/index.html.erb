@@ -21,17 +21,17 @@
       <tbody>
         <% @ambulances.each do |ambulance| %>
           <tr>
-            <th scope="row"><%= ambulance.shop_num %></th>
+            <th scope="row"><a href="/c-series/<%= ambulance.id %>"><%= ambulance.shop_num %></a></th>
             <td><%= ambulance.year %></td>
             <td><%= ambulance.make_model %></td>
             <td><%= ambulance.original_assign %></td>
             <td><%= ambulance.second_assign %></td>
             <td><%= ambulance.third_assign %></td>
-            <td><%= ambulance.notes %></td>
+            <td><%= ambulance.notes %></td></a>
             <td><a href=<%= ambulance.img_link %> target="_blank"><%= ambulance.caption %></a>
               <a href=<%= ambulance.img_link_two %> target="_blank"><%= ambulance.caption_two %></a>
               <a href=<%= ambulance.img_link_three %> target="_blank"><%= ambulance.caption_three %></a>
-              <a href=<%= ambulance.img_link_four %> target="_blank"><%= ambulance.caption_four %></a>
+              <a href=<%= ambulance.img_link_four %> target="_blank"><%= ambulance.caption_four %>
             </td>
           </tr>
         <% end %>

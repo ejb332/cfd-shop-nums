@@ -21,7 +21,7 @@
       <tbody>
         <% @specials.each do |special| %>
           <tr>
-            <th scope="row"><%= special.shop_num %></th>
+            <th scope="row"><a href="/g-series/<%= special.id %>"><%= special.shop_num %></a></a></th>
             <td><%= special.year %></td>
             <td><%= special.make_model %></td>
             <td><%= special.original_assign %></td>

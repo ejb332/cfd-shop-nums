@@ -21,7 +21,7 @@
       <tbody>
         <% @pres.each do |pre| %>
           <tr>
-            <th scope="row"><%= pre.shop_num %></th>
+            <th scope="row"><a href="/pre-shop/<%= pre.id %>"><%= pre.shop_num %></a></th>
             <td><%= pre.year %></td>
             <td><%= pre.make_model %></td>
             <td><%= pre.original_assign %></td>

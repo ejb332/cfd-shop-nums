@@ -21,7 +21,7 @@
       <tbody>
         <% @airports.each do |airport| %>
           <tr>
-            <th scope="row"><%= airport.shop_num %></th>
+            <th scope="row"><a href="/avf-series/<%= airport.id %>"><%= airport.shop_num %></a></th>
             <td><%= airport.year %></td>
             <td><%= airport.make_model %></td>
             <td><%= airport.original_assign %></td>
