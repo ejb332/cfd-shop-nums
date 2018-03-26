@@ -1,7 +1,4 @@
 class EnginesController < ApplicationController
-  require 'date'
-  @current_month = Date.today
-
   def index
     @engines = Engine.all.order(id: :asc)
     render 'index.html.erb'
