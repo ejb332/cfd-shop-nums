@@ -265,6 +265,10 @@ a:visited {
   border-collapse: collapse;
 }
 
+.shop, .year {
+  width: 6%;
+}
+
 @media only screen and (max-width: 749px) {
   nav {
     display: none;

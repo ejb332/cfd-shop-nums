@@ -8,8 +8,8 @@
     <table class="table table-stripe">
       <thead class="thead-inverse ">
         <tr class="row-head">
-          <th scope="col">Shop &#35</th>
-          <th scope="col">Year</th>
+          <th scope="col" class="shop">Shop &#35</th>
+          <th scope="col" class="year">Year</th>
           <th scope="col">Make&#47Model</th>
           <th scope="col">Original Assignment</th>
           <th scope="col">Second Assignment</th>
@@ -21,8 +21,8 @@
       <tbody>
         <% @engines.each do |engine| %>
           <tr>
-            <th scope="row"><a href="/d-series/<%= engine.id %>"><%= engine.shop_num %></a></th>
-            <td><%= engine.year %></td>
+            <th scope="row" class="shop"><a href="/d-series/<%= engine.id %>"><%= engine.shop_num %></a></th>
+            <td class="year"><%= engine.year %></td>
             <td><%= engine.make_model %></td>
             <td><%= engine.original_assign %></td>
             <td><%= engine.second_assign %></td>

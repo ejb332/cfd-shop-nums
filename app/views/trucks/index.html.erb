@@ -6,10 +6,10 @@
 <div class="container">
   <div class="table-responsive">
     <table class="table table-stripe">
-      <thead class="thead-inverse ">
+      <thead class="thead-inverse">
         <tr class="row-head">
-          <th scope="col">Shop &#35</th>
-          <th scope="col">Year</th>
+          <th scope="col" class="shop">Shop &#35</th>
+          <th scope="col" class="year">Year</th>
           <th scope="col">Make&#47Model</th>
           <th scope="col">Original Assignment</th>
           <th scope="col">Second Assignment</th>
@@ -21,8 +21,8 @@
       <tbody>
         <% @trucks.each do |truck| %>
           <tr>
-            <th scope="row"><a href="/e-f-series/<%= truck.id %>"><%= truck.shop_num %></a></th>
-            <td><%= truck.year %></td>
+            <th scope="row" class="shop"><a href="/e-f-series/<%= truck.id %>"><%= truck.shop_num %></a></th>
+            <td class="year"><%= truck.year %></td>
             <td><%= truck.make_model %></td>
             <td><%= truck.original_assign %></td>
             <td><%= truck.second_assign %></td>

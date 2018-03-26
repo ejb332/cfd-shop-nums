@@ -37,24 +37,9 @@ class MainsController < ApplicationController
     elsif search_term.start_with?('S')
       @others = Other.where('shop_num = ?', "#{search_term}")
       @search_tables = @others
-    # elsif search_term.start_with?('CPD', 'EC', 'FM')
-    #   @unclassifiables = Unclassifiable.where('shop_num = ?', "#{search_term}")
-    #   @search_tables = @unclassifiables
-    # elsif search_term.include? 'none'
-    #   @pres = Pre.where('shop_num = ?', "#{search_term}")
-    #   @search_tables = @pres
     else
-      render 'search.html.erb'
+      flash[:notice] = "No results"
     end
     render 'search.html.erb'
   end
-
-  # def search
-  #   search_term = params[:search]
-  #   @search = Special.where(
-  #     "shop_num LIKE ?,
-  #     #{search_term}%, %#{search_term}%"
-  #   ).order(id: :asc)
-  #   render 'index.html.erb'
-  # end
 end

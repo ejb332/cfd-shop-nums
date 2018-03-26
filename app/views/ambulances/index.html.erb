@@ -8,8 +8,8 @@
     <table class="table table-stripe">
       <thead class="thead-inverse ">
         <tr class="row-head">
-          <th scope="col">Shop &#35</th>
-          <th scope="col">Year</th>
+          <th scope="col" class="shop">Shop &#35</th>
+          <th scope="col" class="year">Year</th>
           <th scope="col">Make&#47Model</th>
           <th scope="col">Original Assignment</th>
           <th scope="col">Second Assignment</th>
@@ -22,8 +22,8 @@
         <% @ambulances.each do |ambulance| %>
           <% next if ambulance.id > 104 && ambulance.id < 701 %>
           <tr>
-            <th scope="row"><a href="/c-series/<%= ambulance.id %>"><%= ambulance.shop_num %></a></th>
-            <td><%= ambulance.year %></td>
+            <th scope="row" class="shop"><a href="/c-series/<%= ambulance.id %>"><%= ambulance.shop_num %></a></th>
+            <td class="year"><%= ambulance.year %></td>
             <td><%= ambulance.make_model %></td>
             <td><%= ambulance.original_assign %></td>
             <td><%= ambulance.second_assign %></td>
