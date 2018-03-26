@@ -20,6 +20,7 @@
       </thead>
       <tbody>
         <% @ambulances.each do |ambulance| %>
+          <% next if ambulance.id > 104 && ambulance.id < 701 %>
           <tr>
             <th scope="row"><a href="/c-series/<%= ambulance.id %>"><%= ambulance.shop_num %></a></th>
             <td><%= ambulance.year %></td>
