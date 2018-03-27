@@ -1,3 +1,8 @@
 class Engine < ApplicationRecord
-  @current_month = 'powerful string'
+  require 'date'
+
+  def self.current_month
+    month = Date.today
+    @@current_month = month.strftime('%B %Y')
+  end
 end
