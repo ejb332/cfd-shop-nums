@@ -269,6 +269,11 @@ a:visited {
   width: 6%;
 }
 
+.show-img {
+  max-width: 300px
+  max-height: 300px;
+}
+
 @media only screen and (max-width: 749px) {
   nav {
     display: none;
