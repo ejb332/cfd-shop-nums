@@ -1,5 +1,11 @@
 <h1>Search Results</h1>
-
+<div class="">
+  <% flash.each do |name, message| %>
+    <div class="alert alert-<%= name %> alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <p><%= message %></p>
+  <% end %>
+</div>
 <div class="container">
   <div class="table-responsive">
     <table class="table table-stripe">
@@ -17,7 +23,7 @@
       <tbody>
         <% @search_tables.each do |search_table|  %>
           <tr>
-            <th scope="row"><%= search_table.shop_num %></th>
+            <th scope="row"><a href="<%= search_table.id %>"><%= search_table.shop_num %></a></th>
             <td><%= search_table.year %></td>
             <td><%= search_table.make_model %></td>
             <td><%= search_table.original_assign %></td>
