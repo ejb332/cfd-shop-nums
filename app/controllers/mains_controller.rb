@@ -6,12 +6,17 @@ class MainsController < ApplicationController
   def search_landing
     search_term = params[:search].upcase
     @search_tables = nil
-    if search_term[1] != '-'
-      search_term.insert(1, '-')
+    # if search isn't for the AVF- series and term doesn't include dash
+    # insert it at index one, else keep what user input
+    unless search_term.start_with?('AVF')
+      search_term[1] != '-' ? search_term.insert(1, '-') : search_term
     end
+
     # why won't this refactor to case statement?
     # not DRY! should have 1 render statement
     if search_term.start_with?('AVF')
+      # insert dash at index three if there isn't one
+      search_term[3] != '-' ? search_term.insert(3, '-') : search_term
       @airports = Airport.where('shop_num = ?', "#{search_term}")
       @search_tables = @airports
       render 'search.html.erb'
