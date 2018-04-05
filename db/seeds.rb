@@ -81,6 +81,10 @@
 #   Identification.create
 # end
 
-10.times do
-  Unclassifiable.create
-end
+# 10.times do
+#   Unclassifiable.create
+# end
+
+# 100.times do
+#   Signature.create
+# end

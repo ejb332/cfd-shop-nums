@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309155951) do
+ActiveRecord::Schema.define(version: 20180403010855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aircrafts", force: :cascade do |t|
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "year"
+    t.string   "make_model"
+    t.string   "original_assign"
+    t.string   "second_assign"
+    t.string   "third_assign"
+    t.string   "notes"
+    t.string   "img_link"
+    t.string   "caption"
+    t.string   "img_link_two"
+    t.string   "caption_two"
+  end
 
   create_table "airports", force: :cascade do |t|
     t.string   "shop_num"
@@ -223,6 +238,14 @@ ActiveRecord::Schema.define(version: 20180309155951) do
   create_table "searches", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "signatures", force: :cascade do |t|
+    t.string   "radio_signature"
+    t.string   "unit"
+    t.string   "dates_active"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "specials", force: :cascade do |t|

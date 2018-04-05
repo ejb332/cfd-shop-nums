@@ -19,38 +19,47 @@ class MainsController < ApplicationController
       search_term[3] != '-' ? search_term.insert(3, '-') : search_term
       @airports = Airport.where('shop_num = ?', "#{search_term}")
       @search_tables = @airports
+      @series = '/avf-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('A')
       @cars = Car.where('shop_num = ?', "#{search_term}")
       @search_tables = @cars
+      @series = '/a-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('B')
       @suvs = Suv.where('shop_num = ?', "#{search_term}")
       @search_tables = @suvs
+      @series = '/b-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('C')
       @ambulances = Ambulance.where('shop_num = ?', "#{search_term}")
       @search_tables = @ambulances
+      @series = '/c-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('D')
       @engines = Engine.where('shop_num = ?', "#{search_term}")
       @search_tables = @engines
+      @series = '/d-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('E', 'F')
       @trucks = Truck.where('shop_num = ?', "#{search_term}")
       @search_tables = @trucks
+      @series = '/e-f-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('G')
       @specials = Special.where('shop_num = ?', "#{search_term}")
       @search_tables = @specials
+      @series = '/g-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('H')
       @steamers = Steamer.where('shop_num = ?', "#{search_term}")
       @search_tables = @steamers
+      @series = '/h-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('S')
       @others = Other.where('shop_num = ?', "#{search_term}")
       @search_tables = @others
+      @series = '/s-series/'
       render 'search.html.erb'
     else
       redirect_to root_url
