@@ -3,36 +3,43 @@
     <h1><%= @engine.shop_num %></h1>
   </div>
   <div class="img-wrap">
-    <img src="<%= @engine.img_link %>" class="show-img">
-    <p><%= @engine.caption %></p>
+    <div class="show-img">
+      <%= image_tag(@engine.show_img) %>
+    </div>
+    <p>&copy;<%= @engine.show_img_cap %></p>
   </div>
   <div class="make-model">
     <p><%= @engine.year %> <%= @engine.make_model %></p>
   </div>
   <hr>
+  <div class="assignments">
+    <h3>Assignments</h3>
+  </div>
   <div class="col-md-6 left-info">
-    <p>Original Assignment: <span><%= @engine.original_assign %></span></p>
-    <p>Second Assignment: <span><%= @engine.second_assign %></span></p>
-    <p>Third Assignment: <span><%= @engine.third_assign %></span></p>
-    <p>Fourth Assignment: <span><%= @engine.fourth_assign %></span></p>
+    <p><%= @engine.original_assign %></p>
+    <p><%= @engine.second_assign %></p>
+    <p><%= @engine.third_assign %></p>
+    <p><%= @engine.fourth_assign %></p>
   </div>
   <div class="col-md-6 right-info">
-    <p>Fifth Assignment: <span><%= @engine.fifth_assign %></span></p>
-    <p>Sixth Assignment: <span><%= @engine.sixth_assign %></span></p>
-    <p>Seventh Assignment: <span><%= @engine.seventh_assign %></span></p>
-    <p>Eighth Assignment: <span><%= @engine.eighth_assign %></span></p>
+    <p><%= @engine.fifth_assign %></p>
+    <p><%= @engine.sixth_assign %></p>
+    <p><%= @engine.seventh_assign %></p>
+    <p><%= @engine.eighth_assign %></p>
   </div>
   <div class=" col-md-12 notes">
+    <h3>Vehicle Notes</h3>
     <p><%= @engine.notes %></p>
   </div>
   <div class="col-md-12 img-links">
-    <p><a href=<%= @engine.img_link %> target="_blank"><%= @engine.caption %></a>
-      <a href=<%= @engine.img_link_two %> target="_blank"><%= @engine.caption_two %></a>
-      <a href=<%= @engine.img_link_three %> target="_blank"><%= @engine.caption_three %></a>
-      <a href=<%= @engine.img_link_four %> target="_blank"><%= @engine.caption_four %></a>
-      <a href=<%= @engine.img_link_five %> target="_blank"><%= @engine.caption_five %></a>
-      <a href=<%= @engine.img_link_six %> target="_blank"><%= @engine.caption_six %></a>
-      <a href=<%= @engine.img_link_seven %> target="_blank"><%= @engine.caption_seven %></a>
+    <h3 class="addl-img">Additional Images</h3>
+    <p><a href=<%= @engine.img_link %> target="_blank"><%= @engine.caption %></a> |
+      <a href=<%= @engine.img_link_two %> target="_blank"><%= @engine.caption_two %></a> |
+      <a href=<%= @engine.img_link_three %> target="_blank"><%= @engine.caption_three %></a> |
+      <a href=<%= @engine.img_link_four %> target="_blank"><%= @engine.caption_four %></a>|
+      <a href=<%= @engine.img_link_five %> target="_blank"><%= @engine.caption_five %></a> |
+      <a href=<%= @engine.img_link_six %> target="_blank"><%= @engine.caption_six %></a> |
+      <a href=<%= @engine.img_link_seven %> target="_blank"><%= @engine.caption_seven %></a> |
     </p>
   </div>
   <hr>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403010855) do
+ActiveRecord::Schema.define(version: 20180406010914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 20180403010855) do
     t.string   "caption_five"
     t.string   "fourth_assign"
     t.string   "quarters"
+    t.string   "show_img"
+    t.string   "show_img_cap"
   end
 
   create_table "ambulances", force: :cascade do |t|
@@ -82,6 +84,8 @@ ActiveRecord::Schema.define(version: 20180403010855) do
     t.string   "quarters"
     t.string   "img_link_five"
     t.string   "caption_five"
+    t.string   "show_img"
+    t.string   "show_img_cap"
   end
 
   create_table "cars", force: :cascade do |t|
@@ -109,6 +113,8 @@ ActiveRecord::Schema.define(version: 20180403010855) do
     t.string   "ninth_assign"
     t.string   "img_link_four"
     t.string   "caption_four"
+    t.string   "show_img"
+    t.string   "show_img_cap"
   end
 
   create_table "engines", force: :cascade do |t|
@@ -142,6 +148,8 @@ ActiveRecord::Schema.define(version: 20180403010855) do
     t.string   "img_link_seven"
     t.string   "caption_seven"
     t.string   "quarters"
+    t.string   "show_img"
+    t.string   "show_img_cap"
   end
 
   create_table "identifications", force: :cascade do |t|
@@ -202,6 +210,8 @@ ActiveRecord::Schema.define(version: 20180403010855) do
     t.string   "img_link_three"
     t.string   "caption_three"
     t.string   "quarters"
+    t.string   "show_img"
+    t.string   "show_img_cap"
   end
 
   create_table "pasts", force: :cascade do |t|
@@ -291,6 +301,8 @@ ActiveRecord::Schema.define(version: 20180403010855) do
     t.string   "img_link_thirteen"
     t.string   "caption_thirteen"
     t.string   "quarters"
+    t.string   "show_img"
+    t.string   "show_img_cap"
   end
 
   create_table "steamers", force: :cascade do |t|
@@ -330,6 +342,8 @@ ActiveRecord::Schema.define(version: 20180403010855) do
     t.string   "fifth_assign"
     t.string   "sixth_assign"
     t.string   "seventh_assign"
+    t.string   "show_img"
+    t.string   "show_img_cap"
   end
 
   create_table "trucks", force: :cascade do |t|
@@ -364,6 +378,8 @@ ActiveRecord::Schema.define(version: 20180403010855) do
     t.string   "img_link_seven"
     t.string   "caption_seven"
     t.string   "quarters"
+    t.string   "show_img"
+    t.string   "show_img_cap"
   end
 
   create_table "unclassifiables", force: :cascade do |t|
