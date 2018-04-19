@@ -1,15 +1,38 @@
 <div class="container">
-  <h1><%= @special.shop_num %></h1>
-  <p><%= @special.year %> <%= @special.make_model %></p>
-  <p><%= @special.original_assign %></p>
-  <p><%= @special.second_assign %></p>
-  <p><%= @special.third_assign %></p>
-  <p><%= @special.fourth_assign %></p>
-  <p><%= @special.fifth_assign %></p>
-  <p><%= @special.sixth_assign %></p>
-  <p><%= @special.seventh_assign %></p>
-  <p><%= @special.eighth_assign %></p>
-  <p><%= @special.notes %></p>
+  <div class="big-shop">
+    <h1><%= @special.shop_num %></h1>
+  </div>
+  <div class="img-wrap">
+    <div class="show-img">
+      <%= image_tag(@special.show_img) %>
+    </div>
+    <p>&copy;<%= @special.show_img_cap %></p>
+  </div>
+  <div class="make-model">
+    <p><%= @special.year %> <%= @special.make_model %></p>
+  </div>
+  <hr>
+  <div class="assignments">
+    <h3>Assignments</h3>
+    <div class="col-md-6 left-info">
+      <p><%= @special.original_assign %></p>
+      <p><%= @special.second_assign %></p>
+      <p><%= @special.third_assign %></p>
+      <p><%= @special.fourth_assign %></p>
+    </div>
+  </div>
+  <div class="col-md-6 right-info">
+    <p><%= @special.fifth_assign %></p>
+    <p><%= @special.sixth_assign %></p>
+    <p><%= @special.seventh_assign %></p>
+    <p><%= @special.eighth_assign %></p>
+  </div>
+  <div class="col-md-12 notes">
+    <h3>Vehicle Notes</h3>
+    <p><%= @special.notes %></p>
+  </div>
+  <div class="col-md-12 img-links">
+    <h3 class="addl-img">Additional Images</h3>
   <p><a href=<%= @special.img_link %> target="_blank"><%= @special.caption %></a>
     <a href=<%= @special.img_link_two %> target="_blank"><%= @special.caption_two %></a>
     <a href=<%= @special.img_link_three %> target="_blank"><%= @special.caption_three %></a>
@@ -24,4 +47,6 @@
     <a href=<%= @special.img_link_twelve %> target="_blank"><%= @special.caption_twelve %></a>
     <a href=<%= @special.img_link_thirteen %> target="_blank"><%= @special.caption_thirteen %></a>
   </p>
+  </div>
+  <hr>
 </div>

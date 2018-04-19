@@ -3,23 +3,30 @@
     <h1><%= @airport.shop_num %></h1>
   </div>
   <div class="img-wrap">
-    <img src="<%= @airport_img_link %>" class="show-img">
-    <p><%= @airport.caption %></p>
+    <div class="show-img">
+      <%= image_tag(@airport.show_img) %>
+    </div>
+    <p>&copy;<%= @airport.show_img_cap %></p>
   </div>
   <div class="make-model">
     <p><%= @airport.year %> <%= @airport.make_model %></p>
   </div>
   <hr>
-  <div class="col-md-12">
-    <p><%= @airport.original_assign %></p>
-    <p><%= @airport.second_assign %></p>
-    <p><%= @airport.third_assign %></p>
-    <p><%= @airport.fourth_assign %></p>
+  <div class="assignments">
+    <h3>Assignments</h3>
+    <div class="col-md-12">
+      <p><%= @airport.original_assign %></p>
+      <p><%= @airport.second_assign %></p>
+      <p><%= @airport.third_assign %></p>
+      <p><%= @airport.fourth_assign %></p>
+    </div>
   </div>
-  <div class="notes">
+  <div class="col-md-12 notes">
+    <h3>Vehicle Notes</h3>
     <p><%= @airport.notes %></p>
   </div>
   <div class="img-links">
+    <h3 class="addl-img">Additional Images</h3>
     <p><a href=<%= @airport.img_link %> target="_blank"><%= @airport.caption %></a>
       <a href=<%= @airport.img_link_two %> target="_blank"><%= @airport.caption_two %></a>
       <a href=<%= @airport.img_link_three %> target="_blank"><%= @airport.caption_three %></a>
