@@ -17,10 +17,10 @@
 .byebug_history
 
 # Ignore most images for Heroku purposes
-/app/images/ambulances/*
-/app/images/cars/*
-/app/images/engines/*
-/app/images/others/*
-/app/images/specials/*
-/app/images/suvs/*
-/app/images/trucks/*
+/app/assets/images/ambulances/
+/app/assets/images/cars/
+/app/assets/images/engines/
+/app/assets/images/others/
+/app/assets/images/specials/
+/app/assets/images/suvs/
+/app/assets/images/trucks/
