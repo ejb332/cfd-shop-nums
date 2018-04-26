@@ -16,6 +16,7 @@
 //= require angular
 //= require app
 //= require_tree .
+//= require engines.js
 
 $(document).ready(function() {
 

@@ -43,6 +43,12 @@ img {
   max-width: 100%;
 }
 
+/*.sticky {
+  position: fixed;
+  top: 0;
+  width: 100;
+}*/
+
 .row {
   width: 100%;
   display: flex;
@@ -317,6 +323,10 @@ span {
 
 .img-links {
   text-align: center;
+}
+
+.id {
+  width: 6%;
 }
 
 @media only screen and (max-width: 749px) {

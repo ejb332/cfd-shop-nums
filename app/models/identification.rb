@@ -7,4 +7,8 @@ class Identification < ApplicationRecord
       "%#{search}%"
     )
   end
+
+  def id_dropdown
+    "#{id}"
+  end
 end
