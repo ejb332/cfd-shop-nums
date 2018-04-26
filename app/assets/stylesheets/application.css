@@ -329,6 +329,19 @@ span {
   width: 6%;
 }
 
+.form {
+  border-top: 2px solid black;
+  border-right: 2px solid #FC0D1C;
+  border-bottom: 2px solid #FC0D1C;
+  border-left: 2px solid black;
+  padding: 12px;
+  background-color: #EEE;
+}
+
+.form-header {
+  text-align: center;
+}
+
 @media only screen and (max-width: 749px) {
   nav {
     display: none;
