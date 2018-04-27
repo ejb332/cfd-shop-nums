@@ -342,6 +342,10 @@ span {
   text-align: center;
 }
 
+.submit {
+  text-align: center;
+}
+
 @media only screen and (max-width: 749px) {
   nav {
     display: none;

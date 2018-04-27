@@ -42,18 +42,22 @@
         <p>I need your help! If you have any information about the vehicles listed above&mdash;or anything else, for that matter&mdash;tell me about it using this form.</p>
       </div>
       <%= form_tag 'https://formspree.io/eric.j.biel@gmail.com', class: 'form-group' do%>
-        Email : </br><%= text_field_tag 'email', '', class: 'form-control' %></br>
-        Subject: </br><%= text_field_tag 'subject', '', class: 'form-control' %></br>
-        About: </br>
+        Email <%= text_field_tag 'email', '', class: 'form-control' %></br>
+        Subject <%= text_field_tag 'subject', '', class: 'form-control' %></br>
+        About </br>
         <%= check_box_tag :gen_info, class: 'form-check-input' %>
         <%= label_tag :gen_info, 'General info', class: 'form-check' %></br>
         <%= check_box_tag :listed_id, class: 'form-check-input' %>
         <%= label_tag :listed_id, 'ID of listed vehicle', class: 'form-check' %></br>
         <%= check_box_tag :unlisted_id, class: 'form-check-input' %>
         <%= label_tag :unlisted_id, 'ID of another vehicle', class: 'form-check' %></br>
-        Related to line item: <%= collection_select :id, :identification_id, Identification.all.order(id: :asc), :id, :id_dropdown, prompt: true %></br>
-        Description: </br><%= text_area_tag :description, '', size: '24x6', class: 'form-control'%></br>
-        <%= submit_tag "submit",:value => "submit", class: 'btn btn-primary'%>
+      </br>
+        Related to line item: </br> <%= collection_select :id, :identification_id, Identification.all.order(id: :asc), :id, :id_dropdown, prompt: true %></br>
+      </br>
+        Description </br><%= text_area_tag :description, '', size: '24x6', class: 'form-control'%></br>
+        <div class="submit">
+          <%= submit_tag "submit",:value => "submit", class: 'btn btn-primary'%>
+        </div>
       <%end%>
     </div>
   </div>

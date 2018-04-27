@@ -15,8 +15,8 @@
 //= require bootstrap-sprockets
 //= require angular
 //= require app
+//= require jquery-readyselector
 //= require_tree .
-//= require engines.js
 
 $(document).ready(function() {
 
