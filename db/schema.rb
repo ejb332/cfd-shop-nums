@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406010914) do
+ActiveRecord::Schema.define(version: 20180517154626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -344,6 +344,11 @@ ActiveRecord::Schema.define(version: 20180406010914) do
     t.string   "seventh_assign"
     t.string   "show_img"
     t.string   "show_img_cap"
+  end
+
+  create_table "trailers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "trucks", force: :cascade do |t|

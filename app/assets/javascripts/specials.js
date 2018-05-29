@@ -13,7 +13,8 @@ $('.specials.show').ready(function() {
     $('.notes').hide();
   }
 
-  if($('.img-links p').text() == '') {
+  if($('.img-links a').text() == '') {
     $('.img-links').hide();
+    $('.addl-img').hide();
   }
 });

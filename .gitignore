@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore file with sensitive info
+.env
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -16,7 +19,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-# Ignore most images for Heroku purposes
+# Ignore images for Heroku purposes
+/app/assets/images/airports/
 /app/assets/images/ambulances/
 /app/assets/images/cars/
 /app/assets/images/engines/
