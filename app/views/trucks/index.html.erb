@@ -20,8 +20,9 @@
       </thead>
       <tbody>
         <% @trucks.each do |truck| %>
+        <% next if truck.id > 356 %>
           <tr>
-            <th scope="row" class="shop"><a href="/e-f-series/<%= truck.id %>"><%= truck.shop_num %></a></th>
+            <th scope="row" class="shop"><a href="/e-series/<%= truck.id %>"><%= truck.shop_num %></a></th>
             <td class="year"><%= truck.year %></td>
             <td><%= truck.make_model %></td>
             <td><%= truck.original_assign %></td>

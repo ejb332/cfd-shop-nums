@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180517154626) do
+ActiveRecord::Schema.define(version: 20180605161654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -245,11 +245,6 @@ ActiveRecord::Schema.define(version: 20180517154626) do
     t.string   "quarters"
   end
 
-  create_table "searches", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "signatures", force: :cascade do |t|
     t.string   "radio_signature"
     t.string   "unit"
@@ -347,8 +342,25 @@ ActiveRecord::Schema.define(version: 20180517154626) do
   end
 
   create_table "trailers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "shop_num"
+    t.string   "year"
+    t.string   "gpm"
+    t.string   "original_assign"
+    t.string   "second_assign"
+    t.string   "third_assign"
+    t.string   "fourth_assign"
+    t.string   "fifth_assign"
+    t.string   "sixth_assign"
+    t.string   "seventh_assign"
+    t.string   "eighth_assign"
+    t.string   "ninth_assign"
+    t.string   "notes"
+    t.string   "img_link"
+    t.string   "caption"
+    t.string   "quarters"
+    t.string   "make_model"
   end
 
   create_table "trucks", force: :cascade do |t|

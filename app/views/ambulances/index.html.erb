@@ -17,8 +17,8 @@
           <th scope="col">Notes</th>
           <th scope="col">Image Links</th>
         </tr>
-      </thead>
       <tbody>
+      </thead>
         <% @ambulances.each do |ambulance| %>
           <% next if ambulance.id > 104 && ambulance.id < 701 %>
           <tr>

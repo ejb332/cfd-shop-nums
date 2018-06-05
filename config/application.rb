@@ -10,11 +10,6 @@ Bundler.require(*Rails.groups)
 
 module CfdShopNums
   class Application < Rails::Application
-    config.assets.paths << Rails.root.join(
-      'https://s3.us-east-2.amazonaws.com/cfdshopnumbers/images',
-      '/airports'
-    )
-
     Aws.config.update(
       region: 'us-east-2',
       credentials:

@@ -1,5 +1,5 @@
 class Truck < ApplicationRecord
-  has_many :Trailers
+  has_many :trailers
   def self.search(search)
     where(
       'shop_num ILIKE ? OR make_model ILIKE ? OR original_assign ILIKE ?',

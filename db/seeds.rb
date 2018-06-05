@@ -73,6 +73,12 @@
 #   )
 # end
 
+# (1..229).each do |i|
+#   Trailer.create(
+#     shop_num: "F-#{i}"
+#   )
+# end
+
 # 54.times do
 #   Pre.create
 # end

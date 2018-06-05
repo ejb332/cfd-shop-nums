@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="big-shop">
+    <h1><%= @trailer.shop_num %></h1>
+  </div>
+  <div class="img-wrap">
+    <div class="show-img">
+    </div>
+  </div>
+  <div class="make-model">
+    <p><%= @trailer.year %> <%= @trailer.make_model %></p>
+  </div>
+  <hr>
+  <div class="assignments">
+    <div class="col-md-6 left-info">
+      <p><%= @trailer.original_assign %></p>
+      <p><%= @trailer.second_assign %></p>
+      <p><%= @trailer.third_assign %></p>
+      <p><%= @trailer.fourth_assign %></p>
+    </div>
+    <div class="col-md-6 right-info">
+      <p><%= @trailer.fifth_assign %></p>
+      <p><%= @trailer.sixth_assign %></p>
+      <p><%= @trailer.seventh_assign %></p>
+      <p><%= @trailer.eighth_assign %></p>
+    </div>
+    <div class="col-md-12">
+      <p><%= @trailer.ninth_assign %></p>
+    </div>
+  </div>
+  <div class="col-md-12 notes">
+    <p><%= @trailer.notes %></p>
+  </div>
+  <div class="col-md-12 img-links">
+    <h3 class="addl-img">Additional Images</h3>
+    <p><a href=<%= @trailer.img_link %> target="_blank"><%= @trailer.caption %></a>
+    </p>
+  </div>
+  <hr>
+</div>

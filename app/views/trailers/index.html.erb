@@ -1,0 +1,38 @@
+<meta name="format-detection" content="telephone=no">
+<div class="container series-head">
+  <h1>CFD F-series</h1>
+  <p>Originally used in conjunction when all Truck apparatus were two piece tractor/trailer combinations, the F-series is no longer in use. All trucks currently use E-series numbering.</p>
+</div>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse">
+        <tr class="row-head">
+          <th scope="col" class="shop">Shop &#35</th>
+          <th scope="col" class="year">Year</th>
+          <th scope="col">Make&#47Model</th>
+          <th scope="col">Original Assignment</th>
+          <th scope="col">Second Assignment</th>
+          <th scope="col">Third Assignment</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Image Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @trailers.each do |trailer| %>
+          <tr>
+            <th scope="row" class="shop"><a href="/f-series/<%= trailer.id %>"><%= trailer.shop_num %></a></th>
+            <td class="year"><%= trailer.year %></td>
+            <td><%= trailer.make_model %></td>
+            <td><%= trailer.original_assign %></td>
+            <td><%= trailer.second_assign %></td>
+            <td><%= trailer.third_assign %></td>
+            <td><%= trailer.notes %></td>
+            <td><a href=<%= trailer.img_link %> target="_blank"><%= trailer.caption %></a>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
