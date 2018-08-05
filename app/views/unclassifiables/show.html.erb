@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= @unclassifiable.shop_num %></h1>
   <div class="show-img">
-    <%= image_tag("https://s3.us-east-2.amazonaws.com/cfdshopnumbers/images/unclassifiables/#{@unclassifiable.id}.png") %>
+    <%= unclassifiable_picture %>
   </div>
   <p><%= @unclassifiable.year %> <%= @unclassifiable.make_model %></p>
   <p><%= @unclassifiable.original_assign %></p>
