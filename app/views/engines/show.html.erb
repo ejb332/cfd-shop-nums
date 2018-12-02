@@ -31,7 +31,12 @@
     </div>
     <div class=" col-md-12 notes">
       <h3>Vehicle Notes</h3>
-      <p><%= @engine.notes %></p>
+      <% @engine.engine_notes.each do |engine_note| %>
+        <p><%= engine_note.note %></p>
+      <% end %>
+<!--       <% if @engine.engine_notes.first %>
+        <p><%= @engine.engine_notes.first.note %></p>
+      <% end %> -->
     </div>
     <div class="col-md-12 img-links">
       <h3 class="addl-img">Additional Images</h3>
