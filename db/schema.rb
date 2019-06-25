@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180605161654) do
+ActiveRecord::Schema.define(version: 20190625031532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "caption_five"
     t.string   "fourth_assign"
     t.string   "quarters"
-    t.string   "show_img"
     t.string   "show_img_cap"
+    t.boolean  "show_img"
   end
 
   create_table "ambulances", force: :cascade do |t|
@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "quarters"
     t.string   "img_link_five"
     t.string   "caption_five"
-    t.string   "show_img"
     t.string   "show_img_cap"
+    t.boolean  "show_img"
   end
 
   create_table "cars", force: :cascade do |t|
@@ -113,8 +113,16 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "ninth_assign"
     t.string   "img_link_four"
     t.string   "caption_four"
-    t.string   "show_img"
     t.string   "show_img_cap"
+    t.boolean  "show_img"
+    t.string   "tenth_assign"
+  end
+
+  create_table "engine_notes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "engine_id"
+    t.string   "note"
   end
 
   create_table "engines", force: :cascade do |t|
@@ -131,8 +139,8 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "seventh_assign"
     t.string   "notes"
     t.string   "img_link"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "eighth_assign"
     t.string   "caption"
     t.string   "img_link_two"
@@ -148,8 +156,28 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "img_link_seven"
     t.string   "caption_seven"
     t.string   "quarters"
-    t.string   "show_img"
     t.string   "show_img_cap"
+    t.string   "img_link_eight"
+    t.string   "caption_eight"
+    t.date     "original_assign_date"
+    t.date     "second_assign_date"
+    t.date     "third_assign_date"
+    t.date     "fourth_assign_date"
+    t.date     "fifth_assign_date"
+    t.date     "sixth_assign_date"
+    t.date     "seventh_assign_date"
+    t.date     "eighth_assign_date"
+    t.date     "original_assign_date_end"
+    t.date     "second_assign_date_end"
+    t.date     "third_assign_date_end"
+    t.date     "fourth_assign_date_end"
+    t.date     "fifth_assign_date_end"
+    t.date     "sixth_assign_date_end"
+    t.date     "seventh_assign_date_end"
+    t.date     "eighth_assign_date_end"
+    t.boolean  "show_img"
+    t.string   "delivery_date"
+    t.string   "disposal"
   end
 
   create_table "identifications", force: :cascade do |t|
@@ -210,8 +238,8 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "img_link_three"
     t.string   "caption_three"
     t.string   "quarters"
-    t.string   "show_img"
     t.string   "show_img_cap"
+    t.boolean  "show_img"
   end
 
   create_table "pasts", force: :cascade do |t|
@@ -296,8 +324,8 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "img_link_thirteen"
     t.string   "caption_thirteen"
     t.string   "quarters"
-    t.string   "show_img"
     t.string   "show_img_cap"
+    t.boolean  "show_img"
   end
 
   create_table "steamers", force: :cascade do |t|
@@ -337,8 +365,8 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "fifth_assign"
     t.string   "sixth_assign"
     t.string   "seventh_assign"
-    t.string   "show_img"
     t.string   "show_img_cap"
+    t.boolean  "show_img"
   end
 
   create_table "trailers", force: :cascade do |t|
@@ -361,6 +389,7 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "caption"
     t.string   "quarters"
     t.string   "make_model"
+    t.boolean  "show_img"
   end
 
   create_table "trucks", force: :cascade do |t|
@@ -379,8 +408,8 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "ninth_assign"
     t.string   "notes"
     t.string   "img_link"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "caption"
     t.string   "img_link_two"
     t.string   "caption_two"
@@ -395,8 +424,26 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "img_link_seven"
     t.string   "caption_seven"
     t.string   "quarters"
-    t.string   "show_img"
     t.string   "show_img_cap"
+    t.date     "original_assign_date"
+    t.date     "second_assign_date"
+    t.date     "third_assign_date"
+    t.date     "fourth_assign_date"
+    t.date     "fifth_assign_date"
+    t.date     "sixth_assign_date"
+    t.date     "seventh_assign_date"
+    t.date     "eighth_assign_date"
+    t.date     "ninth_assign_date"
+    t.date     "original_assign_date_end"
+    t.date     "second_assign_date_end"
+    t.date     "third_assign_date_end"
+    t.date     "fourth_assign_date_end"
+    t.date     "fifth_assign_date_end"
+    t.date     "sixth_assign_date_end"
+    t.date     "seventh_assign_date_end"
+    t.date     "eighth_assign_date_end"
+    t.date     "ninth_assign_date_end"
+    t.boolean  "show_img"
   end
 
   create_table "unclassifiables", force: :cascade do |t|
@@ -415,6 +462,7 @@ ActiveRecord::Schema.define(version: 20180605161654) do
     t.string   "img_link_three"
     t.string   "caption_three"
     t.string   "quarters"
+    t.boolean  "show_img"
   end
 
 end

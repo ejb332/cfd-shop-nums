@@ -94,3 +94,7 @@
 # 100.times do
 #   Signature.create
 # end
+
+2000.times do
+  EngineNote.create
+end
