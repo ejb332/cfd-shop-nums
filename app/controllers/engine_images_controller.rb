@@ -1,0 +1,2 @@
+class EngineImagesController < ApplicationController
+end

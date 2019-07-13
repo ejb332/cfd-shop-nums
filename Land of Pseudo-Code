@@ -1,0 +1,21 @@
+Land of Pseudo-Code
+
+Search by Company
+
+Input = Engine 121
+Create empty array - not currently doing this
+Go to engine model
+Look at item with id of 1
+Find column called original_assign
+Does text match Input?
+If a match, copy details to array and go to line 13
+If no, go to line 13
+Repeat starting at line 7 for id: 2 (and so on until end of engines.length)
+Go to second_assign and repeat steps above
+"" third_assign ""
+"" fourth_assign ""
+"" fifth_assign ""
+"" sixth_assign ""
+"" seventh_assign ""
+"" eighth_assign ""
+After eighth_assign on final id, pass the created array to the view via a render statement
