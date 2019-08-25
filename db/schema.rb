@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190625031532) do
+ActiveRecord::Schema.define(version: 20190811202308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,9 @@ ActiveRecord::Schema.define(version: 20190625031532) do
     t.string   "caption_five"
     t.string   "show_img_cap"
     t.boolean  "show_img"
+    t.string   "ninth_assign"
+    t.string   "tenth_assign"
+    t.string   "eleventh_assign"
   end
 
   create_table "cars", force: :cascade do |t|
@@ -98,8 +101,8 @@ ActiveRecord::Schema.define(version: 20190625031532) do
     t.string   "fourth_assign"
     t.string   "notes"
     t.string   "img_link"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "caption"
     t.string   "img_link_two"
     t.string   "caption_two"
@@ -116,6 +119,13 @@ ActiveRecord::Schema.define(version: 20190625031532) do
     t.string   "show_img_cap"
     t.boolean  "show_img"
     t.string   "tenth_assign"
+    t.string   "eleventh_assign"
+    t.string   "twelfth_assign"
+    t.string   "thirteenth_assign"
+    t.string   "fourteenth_assign"
+    t.string   "fifteenth_assign"
+    t.string   "sixteenth_assign"
+    t.string   "seventeenth_assign"
   end
 
   create_table "engine_notes", force: :cascade do |t|
@@ -353,8 +363,8 @@ ActiveRecord::Schema.define(version: 20190625031532) do
     t.string   "third_assign"
     t.string   "notes"
     t.string   "img_link"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "caption"
     t.string   "img_link_two"
     t.string   "caption_two"
@@ -367,6 +377,14 @@ ActiveRecord::Schema.define(version: 20190625031532) do
     t.string   "seventh_assign"
     t.string   "show_img_cap"
     t.boolean  "show_img"
+    t.string   "eighth_assign"
+    t.string   "ninth_assign"
+    t.string   "tenth_assign"
+    t.string   "eleventh_assign"
+    t.string   "twelfth_assign"
+    t.string   "thirteenth_assign"
+    t.string   "fourteenth_assign"
+    t.string   "fifteenth_assign"
   end
 
   create_table "trailers", force: :cascade do |t|
@@ -444,6 +462,9 @@ ActiveRecord::Schema.define(version: 20190625031532) do
     t.date     "eighth_assign_date_end"
     t.date     "ninth_assign_date_end"
     t.boolean  "show_img"
+    t.string   "tenth_assign"
+    t.string   "eleventh_assign"
+    t.string   "twelfth_assign"
   end
 
   create_table "unclassifiables", force: :cascade do |t|
