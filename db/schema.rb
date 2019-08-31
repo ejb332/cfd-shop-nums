@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190811202308) do
+ActiveRecord::Schema.define(version: 20190829031233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -388,8 +388,8 @@ ActiveRecord::Schema.define(version: 20190811202308) do
   end
 
   create_table "trailers", force: :cascade do |t|
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "shop_num"
     t.string   "year"
     t.string   "gpm"
@@ -408,6 +408,13 @@ ActiveRecord::Schema.define(version: 20190811202308) do
     t.string   "quarters"
     t.string   "make_model"
     t.boolean  "show_img"
+    t.string   "tenth_assign"
+    t.string   "eleventh_assign"
+    t.string   "twelfth_assign"
+    t.string   "thirteenth_assign"
+    t.string   "fourteenth_assign"
+    t.string   "fifteenth_assign"
+    t.string   "sixteenth_assign"
   end
 
   create_table "trucks", force: :cascade do |t|
