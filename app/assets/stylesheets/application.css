@@ -336,6 +336,7 @@ span {
   border-left: 2px solid black;
   padding: 12px;
   background-color: #EEE;
+  text-align: center;
 }
 
 .form-header {
