@@ -34,7 +34,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'aws-sdk', '~> 2'
+# specific update calls for github security issues
 gem 'nokogiri', '>= 1.10.4'
+# gem 'actionview', '>= 5.0.7.2'
+gem 'rack', '>= 2.0.6'
+gem 'loofah', '>= 2.2.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
