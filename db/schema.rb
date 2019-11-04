@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190829031233) do
+ActiveRecord::Schema.define(version: 20191016005540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -281,6 +281,13 @@ ActiveRecord::Schema.define(version: 20190829031233) do
     t.string   "fourth_assign"
     t.string   "fifth_assign"
     t.string   "quarters"
+    t.string   "sixth_assign"
+    t.string   "seventh_assign"
+    t.string   "eighth_assign"
+    t.string   "ninth_assign"
+    t.string   "tenth_assign"
+    t.string   "eleventh_assign"
+    t.string   "twelfth_assign"
   end
 
   create_table "signatures", force: :cascade do |t|
@@ -336,6 +343,10 @@ ActiveRecord::Schema.define(version: 20190829031233) do
     t.string   "quarters"
     t.string   "show_img_cap"
     t.boolean  "show_img"
+    t.string   "ninth_assign"
+    t.string   "tenth_assign"
+    t.string   "eleventh_assign"
+    t.string   "twelfth_assign"
   end
 
   create_table "steamers", force: :cascade do |t|
