@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191016005540) do
+ActiveRecord::Schema.define(version: 20200719032426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -290,6 +290,83 @@ ActiveRecord::Schema.define(version: 20191016005540) do
     t.string   "twelfth_assign"
   end
 
+  create_table "sequences", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "company"
+    t.string   "signature"
+    t.string   "start_date"
+    t.string   "quarters"
+    t.string   "transfer_date"
+    t.string   "notes1"
+    t.string   "notes2"
+    t.string   "first"
+    t.string   "first_photo"
+    t.string   "second"
+    t.string   "second_photo"
+    t.string   "third"
+    t.string   "third_photo"
+    t.string   "fourth"
+    t.string   "fourth_photo"
+    t.string   "fifth"
+    t.string   "fifth_photo"
+    t.string   "sixth"
+    t.string   "sixth_photo"
+    t.string   "seventh"
+    t.string   "seventh_photo"
+    t.string   "eighth"
+    t.string   "eighth_photo"
+    t.string   "ninth"
+    t.string   "ninth_photo"
+    t.string   "tenth"
+    t.string   "tenth_photo"
+    t.string   "eleventh"
+    t.string   "eleventh_photo"
+    t.string   "twelfth"
+    t.string   "twelfth_photo"
+    t.string   "thirteenth"
+    t.string   "thirteenth_photo"
+    t.string   "fourteenth"
+    t.string   "fourteenth_photo"
+    t.string   "fifteenth"
+    t.string   "fifteenth_photo"
+    t.string   "sixteenth"
+    t.string   "sixteenth_photo"
+    t.string   "seventeenth"
+    t.string   "seventeenth_photo"
+    t.string   "eighteenth"
+    t.string   "eighteenth_photo"
+    t.string   "nineteenth"
+    t.string   "nineteenth_photo"
+    t.string   "twentieth"
+    t.string   "twentieth_photo"
+    t.string   "twenty_first"
+    t.string   "twenty_second"
+    t.string   "twenty_third"
+    t.string   "twenty_fourth"
+    t.string   "twenty_fifth"
+    t.string   "twenty_sixth"
+    t.string   "twenty_seventh"
+    t.string   "twenty_eighth"
+    t.string   "twenty_ninth"
+    t.string   "thirtieth"
+    t.string   "motorized"
+    t.string   "quarters_two"
+    t.string   "quarters_three"
+    t.string   "quarters_four"
+    t.string   "quarters_five"
+    t.string   "twenty_first_photo"
+    t.string   "twenty_second_photo"
+    t.string   "twenty_third_photo"
+    t.string   "twenty_fourth_photo"
+    t.string   "twenty_fifth_photo"
+    t.string   "twenty_sixth_photo"
+    t.string   "twenty_seventh_photo"
+    t.string   "twenty_eighth_photo"
+    t.string   "twenty_ninth_photo"
+    t.string   "thirtieth_photo"
+  end
+
   create_table "signatures", force: :cascade do |t|
     t.string   "radio_signature"
     t.string   "unit"
@@ -502,6 +579,7 @@ ActiveRecord::Schema.define(version: 20191016005540) do
     t.string   "caption_three"
     t.string   "quarters"
     t.boolean  "show_img"
+    t.string   "show_img_cap"
   end
 
 end
