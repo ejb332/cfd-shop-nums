@@ -46,6 +46,10 @@ $(document).ready(function() {
     $('#e-drop').slideToggle(800);
   });
 
+  $('#f').hover(function() {
+    $('#f-drop').slideToggle(800);
+  });
+
   $('#g').hover(function() {;
     $('#g-drop').slideToggle(800);
   });

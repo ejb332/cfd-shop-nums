@@ -1,0 +1,51 @@
+class SetUpColumnsForSequence < ActiveRecord::Migration[5.0]
+  def change
+    add_column :sequences, :company, :string
+    add_column :sequences, :signature, :string
+    add_column :sequences, :start_date, :string
+    add_column :sequences, :quarters, :string
+    add_column :sequences, :transfer_date, :string
+    add_column :sequences, :notes1, :string
+    add_column :sequences, :notes2, :string
+    add_column :sequences, :first, :string
+    add_column :sequences, :first_photo, :string
+    add_column :sequences, :second, :string
+    add_column :sequences, :second_photo, :string
+    add_column :sequences, :third, :string
+    add_column :sequences, :third_photo, :string
+    add_column :sequences, :fourth, :string
+    add_column :sequences, :fourth_photo, :string
+    add_column :sequences, :fifth, :string
+    add_column :sequences, :fifth_photo, :string
+    add_column :sequences, :sixth, :string
+    add_column :sequences, :sixth_photo, :string
+    add_column :sequences, :seventh, :string
+    add_column :sequences, :seventh_photo, :string
+    add_column :sequences, :eighth, :string
+    add_column :sequences, :eighth_photo, :string
+    add_column :sequences, :ninth, :string
+    add_column :sequences, :ninth_photo, :string
+    add_column :sequences, :tenth, :string
+    add_column :sequences, :tenth_photo, :string
+    add_column :sequences, :eleventh, :string
+    add_column :sequences, :eleventh_photo, :string
+    add_column :sequences, :twelfth, :string
+    add_column :sequences, :twelfth_photo, :string
+    add_column :sequences, :thirteenth, :string
+    add_column :sequences, :thirteenth_photo, :string
+    add_column :sequences, :fourteenth, :string
+    add_column :sequences, :fourteenth_photo, :string
+    add_column :sequences, :fifteenth, :string
+    add_column :sequences, :fifteenth_photo, :string
+    add_column :sequences, :sixteenth, :string
+    add_column :sequences, :sixteenth_photo, :string
+    add_column :sequences, :seventeenth, :string
+    add_column :sequences, :seventeenth_photo, :string
+    add_column :sequences, :eighteenth, :string
+    add_column :sequences, :eighteenth_photo, :string
+    add_column :sequences, :nineteenth, :string
+    add_column :sequences, :nineteenth_photo, :string
+    add_column :sequences, :twentieth, :string
+    add_column :sequences, :twentieth_photo, :string
+  end
+end

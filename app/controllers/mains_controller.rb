@@ -41,10 +41,15 @@ class MainsController < ApplicationController
       @search_tables = @engines
       @series = '/d-series/'
       render 'search.html.erb'
-    elsif search_term.start_with?('E', 'F')
+    elsif search_term.start_with?('E')
       @trucks = Truck.where('shop_num = ?', "#{search_term}")
       @search_tables = @trucks
-      @series = '/e-f-series/'
+      @series = '/e-series/'
+      render 'search.html.erb'
+      elsif search_term.start_with?('F')
+      @trailers = Trailer.where('shop_num = ?', "#{search_term}")
+      @search_tables = @trailers
+      @series = '/f-series/'
       render 'search.html.erb'
     elsif search_term.start_with?('G')
       @specials = Special.where('shop_num = ?', "#{search_term}")

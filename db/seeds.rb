@@ -99,6 +99,6 @@
 #   EngineNote.create
 # end
 
-# 600.times do
-#   Sequence.create
-# end
+75.times do
+  Sequence.create
+end

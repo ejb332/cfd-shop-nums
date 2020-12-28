@@ -19,3 +19,12 @@ Go to second_assign and repeat steps above
 "" seventh_assign ""
 "" eighth_assign ""
 After eighth_assign on final id, pass the created array to the view via a render statement
+
+---
+
+History by Company
+
+Prerequisite: Must have date data field in postgres db
+
+Find all instances where query = Engine Co. 1
+Order by start date, descending

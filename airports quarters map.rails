@@ -1,0 +1,25 @@
+<!-->
+HTML removed from show.html.erb for airports - Google Maps API key within
+Need to get working
+-->
+  <div class="quarters">
+    <h3 id="map-title">Quarters</h3>
+    <div id="map"></div>
+      <script>
+        let map;
+        function initMap() {
+          let center = {<%= @airport.quarters %>};
+
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: center,
+            zoom: 17
+          });
+
+          let marker = new google.maps.Marker({
+            position: center,
+            map: map
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD06DH9q_nLH-TRGk_6BWBhf8cjDBqZdQ&callback=initMap" async defer></script>
+  </div>

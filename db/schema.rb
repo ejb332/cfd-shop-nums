@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200719032426) do
+ActiveRecord::Schema.define(version: 20201228010655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -440,6 +440,10 @@ ActiveRecord::Schema.define(version: 20200719032426) do
     t.string   "quarters"
     t.string   "second_assign"
     t.string   "third_assign"
+    t.string   "img_link_two"
+    t.string   "caption_two"
+    t.string   "img_link_three"
+    t.string   "caption_three"
   end
 
   create_table "suvs", force: :cascade do |t|
@@ -503,6 +507,10 @@ ActiveRecord::Schema.define(version: 20200719032426) do
     t.string   "fourteenth_assign"
     t.string   "fifteenth_assign"
     t.string   "sixteenth_assign"
+    t.string   "img_link_two"
+    t.string   "caption_two"
+    t.string   "img_link_three"
+    t.string   "caption_three"
   end
 
   create_table "trucks", force: :cascade do |t|
