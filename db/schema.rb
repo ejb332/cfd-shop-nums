@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201228010655) do
+ActiveRecord::Schema.define(version: 20201231210837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -477,6 +477,16 @@ ActiveRecord::Schema.define(version: 20201228010655) do
     t.string   "thirteenth_assign"
     t.string   "fourteenth_assign"
     t.string   "fifteenth_assign"
+    t.string   "img_link_four"
+    t.string   "caption_four"
+    t.string   "img_link_five"
+    t.string   "caption_five"
+    t.string   "img_link_six"
+    t.string   "caption_six"
+    t.string   "img_link_seven"
+    t.string   "caption_seven"
+    t.string   "img_link_eight"
+    t.string   "caption_eight"
   end
 
   create_table "trailers", force: :cascade do |t|
