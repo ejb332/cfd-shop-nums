@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201231210837) do
+ActiveRecord::Schema.define(version: 20210124182334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -188,6 +188,11 @@ ActiveRecord::Schema.define(version: 20201231210837) do
     t.boolean  "show_img"
     t.string   "delivery_date"
     t.string   "disposal"
+    t.string   "ninth_assign"
+    t.string   "tenth_assign"
+    t.string   "eleventh_assign"
+    t.string   "twelfth_assign"
+    t.string   "thirteenth_assign"
   end
 
   create_table "identifications", force: :cascade do |t|
