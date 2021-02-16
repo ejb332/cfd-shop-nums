@@ -28,3 +28,12 @@ Prerequisite: Must have date data field in postgres db
 
 Find all instances where query = Engine Co. 1
 Order by start date, descending
+
+<!-- REMOVED FROM app/views/engines/show.html.erb
+  <% @engine.engine_notes.each do |engine_note| %>
+        <p><%= engine_note.note %></p>
+      <% end %>
+    -->
+<!-- DO NOT USE      <% if @engine.engine_notes.first %>
+        <p><%= @engine.engine_notes.first.note %></p>
+      <% end %> -->
