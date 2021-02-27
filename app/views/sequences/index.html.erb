@@ -1,9 +1,33 @@
 <div>
   <h1>Complete Company Apparatus Assignment History</h1>
 </div>
-
+  <p> A (mostly) complete listing of all Chicago Fire Department companies, current and disbanded, assigned motorized apparatus.
 <div>
-  <%= @sequences.each do |sequence| %>
-  <h3><%= sequence.company %></h3>
-  <% end %>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-stripe">
+      <thead class="thead-inverse sticky" id="navbar">
+        <tr class="row-head">
+          <th scope="col">Company</th>
+          <th scope="col">Signature</th>
+          <th scope="col">Formation Date</th>
+          <th scope="col">Motorization Date</th>
+          <th scope="col">Transfer Date</th>
+          <th scope="col">New Signature</th>
+          <th scope="col">Disbanded</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sequences.each do |sequence| %>
+          <tr>
+            <th scope="row" class="shop"><a href=""><%= sequence.company %></a></th>
+            <td ><%= sequence.signature %></td>
+            <td><%= sequence.start_date %></td>
+            <td><%= sequence.motorized %></td>
+            <td><%= sequence.transfer_date %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
