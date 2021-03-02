@@ -3,6 +3,14 @@
 </div>
   <p> A (mostly) complete listing of all Chicago Fire Department companies, current and disbanded, assigned motorized apparatus.
 <div>
+  <div class="col-12 text-center">
+    <%= form_tag "/search_co", method: :post do %>
+      <%= text_field_tag :search, nil, placeholder: 'e.g. 1/16/1967', :required => 'required' %>
+        <%= submit_tag "Search" %>
+      <% end %>
+    </div>
+  </div>
+<div class="row">
 <div class="container">
   <div class="table-responsive">
     <table class="table table-stripe">
@@ -22,9 +30,11 @@
           <tr>
             <th scope="row" class="shop"><a href=""><%= sequence.company %></a></th>
             <td ><%= sequence.signature %></td>
-            <td><%= sequence.start_date %></td>
-            <td><%= sequence.motorized %></td>
+            <td><%= sequence.organization_date %></td>
+            <td><%= sequence.motorized_date %></td>
             <td><%= sequence.transfer_date %></td>
+            <td><%= sequence.transfer_signature %></td>
+            <td><%= sequence.disbanded_date %></td>
           </tr>
         <% end %>
       </tbody>

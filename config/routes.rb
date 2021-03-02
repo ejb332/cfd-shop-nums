@@ -33,5 +33,5 @@ Rails.application.routes.draw do
   get '/company_history' => 'sequences#index'
   get '/company_history/:id' => 'sequences#show'
   post '/search' => 'mains#search_landing'
-  post '/search_co' => 'mains#search_co'
+  post '/search_co' => 'sequences#search_co_landing'
 end
