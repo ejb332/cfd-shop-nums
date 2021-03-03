@@ -1,4 +1,4 @@
-<h1>Apparatus in Service on <%= @search_term %></h1>
+<h1>Apparatus in Service on <%= @search_heading %></h1>
 <div class="">
   <% flash.each do |name, message| %>
     <div class="alert alert-<%= name %> alert-dismissible" role="alert">
@@ -19,7 +19,12 @@
         </tr>
       </thead>
       <tbody>
-
+        <% @search_results.each do |search_result| %>
+          <tr>
+            <th scope="row" class="shop"><a href=""><%= search_result.company %></a></th>
+            <td ><%= search_result.signature %></td>
+          </tr>
+        <% end %>
       </tbody>
     </table>
   </div>

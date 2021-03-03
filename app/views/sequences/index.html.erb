@@ -1,43 +1,61 @@
-<div>
-  <h1>Complete Company Apparatus Assignment History</h1>
-</div>
-  <p> A (mostly) complete listing of all Chicago Fire Department companies, current and disbanded, assigned motorized apparatus.
-<div>
-  <div class="col-12 text-center">
-    <%= form_tag "/search_co", method: :post do %>
-      <%= text_field_tag :search, nil, placeholder: 'e.g. 1/16/1967', :required => 'required' %>
-        <%= submit_tag "Search" %>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div>
+    <h1>Complete Company Apparatus Assignment History</h1>
+  </div>
+    <p> A (mostly) complete listing of Chicago Fire Department companies, current and disbanded, assigned motorized apparatus.</p>
+  <div>
+    <p id="search-query">Search by a specific date for a listing of all apparatus in service at that time.</p>
+    <div class="col-12 text-center">
+      <%= form_tag "/search_co", method: :post do %>
+        <%= date_field_tag :search, '1/16/1967' , :required => 'required' %>
+          <%= submit_tag "Search" %>
       <% end %>
     </div>
   </div>
-<div class="row">
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse sticky" id="navbar">
-        <tr class="row-head">
-          <th scope="col">Company</th>
-          <th scope="col">Signature</th>
-          <th scope="col">Formation Date</th>
-          <th scope="col">Motorization Date</th>
-          <th scope="col">Transfer Date</th>
-          <th scope="col">New Signature</th>
-          <th scope="col">Disbanded</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @sequences.each do |sequence| %>
-          <tr>
-            <th scope="row" class="shop"><a href=""><%= sequence.company %></a></th>
-            <td ><%= sequence.signature %></td>
-            <td><%= sequence.organization_date %></td>
-            <td><%= sequence.motorized_date %></td>
-            <td><%= sequence.transfer_date %></td>
-            <td><%= sequence.transfer_signature %></td>
-            <td><%= sequence.disbanded_date %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <div class="row">
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-stripe">
+          <thead class="thead-inverse sticky" id="navbar">
+            <tr class="row-head">
+              <th scope="col">Company</th>
+              <th scope="col">Signature</th>
+              <th scope="col">Formation Date</th>
+              <th scope="col">Motorization Date</th>
+              <th scope="col">Transfer Date</th>
+              <th scope="col">New Signature</th>
+              <th scope="col">Disbanded</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @sequences.each do |sequence| %>
+              <tr>
+                <th scope="row" class="shop"><a href=""><%= sequence.company %></a></th>
+                <td ><%= sequence.signature %></td>
+                <td><%= sequence.organization_date %></td>
+                <td><%= sequence.motorized_date %></td>
+                <td><%= sequence.transfer_date %></td>
+                <td><%= sequence.transfer_signature %></td>
+                <td><%= sequence.disbanded_date %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
+</body>

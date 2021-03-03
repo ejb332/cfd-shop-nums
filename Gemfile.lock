@@ -70,6 +70,9 @@ GEM
       railties (>= 3.2, < 6.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    execute_sql (0.1.1)
+      rails
+      terminal-table
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -159,6 +162,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sunspot_solr (2.3.0)
+    terminal-table (3.0.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -169,6 +174,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.15)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.7.0)
     unicorn (5.4.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -190,6 +196,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   dotenv-rails
+  execute_sql
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -210,4 +217,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.13.6
+   1.17.2
