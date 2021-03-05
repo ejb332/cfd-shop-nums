@@ -285,6 +285,11 @@ a:visited {
   color: #FFF;
 }
 
+.img-wrap {
+  max-width: 900px;
+  overflow: auto;
+}
+
 .show-img {
   max-width: 600px;
   max-height: 600px;
