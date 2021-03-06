@@ -20,7 +20,7 @@
     <p id="search-query">Search by a specific date for a listing of all apparatus in service at that time.</p>
     <div class="col-12 text-center">
       <%= form_tag "/search_co", method: :post do %>
-        <%= date_field_tag :search, '1/16/1967' , :required => 'required' %>
+        <%= date_field_tag :search, :required => 'required' %>
           <%= submit_tag "Search" %>
       <% end %>
     </div>
@@ -33,11 +33,11 @@
             <tr class="row-head">
               <th scope="col">Company</th>
               <th scope="col">Signature</th>
-              <th scope="col">Formation Date</th>
+              <th scope="col">Organization Date</th>
               <th scope="col">Motorization Date</th>
+              <th scope="col">Disbanded</th>
               <th scope="col">Transfer Date</th>
               <th scope="col">New Signature</th>
-              <th scope="col">Disbanded</th>
             </tr>
           </thead>
           <tbody>
@@ -45,11 +45,25 @@
               <tr>
                 <th scope="row" class="shop"><a href=""><%= sequence.company %></a></th>
                 <td ><%= sequence.signature %></td>
-                <td><%= sequence.organization_date %></td>
-                <td><%= sequence.motorized_date %></td>
-                <td><%= sequence.transfer_date %></td>
+                <% if sequence.organization_date? %>
+                  <td><%= pretty_date(sequence.organization_date) %></td>
+                <% end %>
+                <% if sequence.motorized_date? %>
+                  <td><%= pretty_date(sequence.motorized_date) %></td>
+                <% else %>
+                  <td><%= " " %></td>
+                <% end %>
+                <% if sequence.disbanded_date? %>
+                  <td><%= pretty_date(sequence.disbanded_date) %></td>
+                <% else %>
+                  <td><%= " " %></td>
+                <% end %>
+                <% if sequence.transfer_date? %>
+                  <td><%= pretty_date(sequence.transfer_date) %></td>
+                  <% else %>
+                  <td><%= " " %></td>
+                <% end %>
                 <td><%= sequence.transfer_signature %></td>
-                <td><%= sequence.disbanded_date %></td>
               </tr>
             <% end %>
           </tbody>
