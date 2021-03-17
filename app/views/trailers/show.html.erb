@@ -1,45 +1,60 @@
-<div class="container">
-  <div class="big-shop">
-    <h1><%= @trailer.shop_num %></h1>
-  </div>
-  <div class="img-wrap">
-    <div class="show-img">
-      <%= trailer_picture %>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container">
+    <div class="big-shop">
+      <h1><%= @trailer.shop_num %></h1>
     </div>
-  </div>
-  <div class="make-model">
-    <p><%= @trailer.year %> <%= @trailer.make_model %></p>
-  </div>
-  <hr>
-  <div class="assignments">
-    <div class="col-md-6 left-info">
-      <p><%= @trailer.original_assign %></p>
-      <p><%= @trailer.second_assign %></p>
-      <p><%= @trailer.third_assign %></p>
-      <p><%= @trailer.fourth_assign %></p>
-      <p><%= @trailer.fifth_assign %></p>
-      <p><%= @trailer.sixth_assign %></p>
-      <p><%= @trailer.seventh_assign %></p>
-      <p><%= @trailer.eighth_assign %></p>
+    <div class="img-wrap">
+      <div class="show-img">
+        <%= trailer_picture %>
+      </div>
     </div>
-    <div class="col-md-6 right-info">
-      <p><%= @trailer.ninth_assign %></p>
-      <p><%= @trailer.tenth_assign %></p>
-      <p><%= @trailer.eleventh_assign %></p>
-      <p><%= @trailer.twelfth_assign %></p>
-      <p><%= @trailer.thirteenth_assign %></p>
-      <p><%= @trailer.fourteenth_assign %></p>
-      <p><%= @trailer.fifteenth_assign %></p>
-      <p><%= @trailer.sixteenth_assign %></p>
+    <div class="make-model">
+      <p><%= @trailer.year %> <%= @trailer.make_model %></p>
     </div>
+    <hr>
+    <div class="assignments">
+      <div class="col-md-6 left-info">
+        <p><%= @trailer.original_assign %></p>
+        <p><%= @trailer.second_assign %></p>
+        <p><%= @trailer.third_assign %></p>
+        <p><%= @trailer.fourth_assign %></p>
+        <p><%= @trailer.fifth_assign %></p>
+        <p><%= @trailer.sixth_assign %></p>
+        <p><%= @trailer.seventh_assign %></p>
+        <p><%= @trailer.eighth_assign %></p>
+      </div>
+      <div class="col-md-6 right-info">
+        <p><%= @trailer.ninth_assign %></p>
+        <p><%= @trailer.tenth_assign %></p>
+        <p><%= @trailer.eleventh_assign %></p>
+        <p><%= @trailer.twelfth_assign %></p>
+        <p><%= @trailer.thirteenth_assign %></p>
+        <p><%= @trailer.fourteenth_assign %></p>
+        <p><%= @trailer.fifteenth_assign %></p>
+        <p><%= @trailer.sixteenth_assign %></p>
+      </div>
+    </div>
+    <div class="col-md-12 notes">
+      <p><%= @trailer.notes %></p>
+    </div>
+    <div class="col-md-12 img-links">
+      <h3 class="addl-img">Additional Images</h3>
+      <p><a href=<%= @trailer.img_link %> target="_blank"><%= @trailer.caption %></a>
+      </p>
+    </div>
+    <hr>
   </div>
-  <div class="col-md-12 notes">
-    <p><%= @trailer.notes %></p>
-  </div>
-  <div class="col-md-12 img-links">
-    <h3 class="addl-img">Additional Images</h3>
-    <p><a href=<%= @trailer.img_link %> target="_blank"><%= @trailer.caption %></a>
-    </p>
-  </div>
-  <hr>
-</div>
+</body>

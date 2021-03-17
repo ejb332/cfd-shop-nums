@@ -1,40 +1,54 @@
-<meta name="format-detection" content="telephone=no">
-<div class="container series-head">
-  <h1>CFD A-series</h1>
-  <p>The A-series was originally for large sedans used by high-ranking CFD personnel. In more recent times, the A-series is used for any non-SUV car.</p>
-</div>
-
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse ">
-        <tr class="row-head">
-          <th scope="col" class="shop">Shop &#35</th>
-          <th scope="col" class="year">Year</th>
-          <th scope="col">Make&#47Model</th>
-          <th scope="col">Original Assignment</th>
-          <th scope="col">Second Assignment</th>
-          <th scope="col">Third Assignment</th>
-          <th scope="col">Image Links</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @cars.each do |car| %>
-          <tr>
-            <th scope="row" class="shop"><a href="/a-series/<%= car.id %>"><%= car.shop_num %></a></th>
-            <td class="year"><%= car.year %></td>
-            <td><%= car.make_model %></td>
-            <td><%= car.original_assign %></td>
-            <td><%= car.second_assign %></td>
-            <td><%= car.third_assign %></td>
-            <td><a href=<%= car.img_link %> target="_blank"><%= car.caption %></a>
-              <a href=<%= car.img_link_two %> target="_blank"><%= car.caption_two %></a>
-              <a href=<%= car.img_link_three %> target="_blank"><%= car.caption_three %></a>
-              <a href=<%= car.img_link_four %> target="_blank"><%= car.caption_four %></a>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<head>
+  <meta name="format-detection" content="telephone=no">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container series-head">
+    <h1>CFD A-series</h1>
+    <p>The A-series was originally for large sedans used by high-ranking CFD personnel. In more recent times, the A-series is used for any non-SUV car.</p>
   </div>
-</div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-stripe">
+        <thead class="thead-inverse ">
+          <tr class="row-head">
+            <th scope="col" class="shop">Shop &#35</th>
+            <th scope="col" class="year">Year</th>
+            <th scope="col">Make&#47Model</th>
+            <th scope="col">Original Assignment</th>
+            <th scope="col">Second Assignment</th>
+            <th scope="col">Third Assignment</th>
+            <th scope="col">Image Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @cars.each do |car| %>
+            <tr>
+              <th scope="row" class="shop"><a href="/a-series/<%= car.id %>"><%= car.shop_num %></a></th>
+              <td class="year"><%= car.year %></td>
+              <td><%= car.make_model %></td>
+              <td><%= car.original_assign %></td>
+              <td><%= car.second_assign %></td>
+              <td><%= car.third_assign %></td>
+              <td><a href=<%= car.img_link %> target="_blank"><%= car.caption %></a>
+                <a href=<%= car.img_link_two %> target="_blank"><%= car.caption_two %></a>
+                <a href=<%= car.img_link_three %> target="_blank"><%= car.caption_three %></a>
+                <a href=<%= car.img_link_four %> target="_blank"><%= car.caption_four %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

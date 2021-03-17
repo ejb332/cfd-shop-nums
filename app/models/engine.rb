@@ -1,5 +1,6 @@
 class Engine < ApplicationRecord
   has_many :engine_notes
+  belongs_to :sequence
 
   require 'date'
 

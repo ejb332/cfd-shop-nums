@@ -1,38 +1,53 @@
-<meta name="format-detection" content="telephone=no">
-<div class="container series-head">
-  <h1>Before The Shop Numbers</h1>
-  <p>The CFD began purchasing motorized apparatus in earnest in 1911. Many of these early vehicles didn't last long enough to receive a brass plaque with shop number in early 1923. Numbering on this page comes from the excellent Ken Little/John McNalis History of Chicago Firehouses (volumes I - IV).</p>
-</div>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse ">
-        <tr class="row-head">
-          <th scope="col">Shop &#35</th>
-          <th scope="col">Year</th>
-          <th scope="col">Make&#47Model</th>
-          <th scope="col">Original Assignment</th>
-          <th scope="col">Second Assignment</th>
-          <th scope="col">Third Assignment</th>
-          <th scope="col">Notes</th>
-          <th scope="col">Image Links</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @pres.each do |pre| %>
-          <tr>
-            <th scope="row"><a href="/pre-shop/<%= pre.id %>"><%= pre.shop_num %></a></th>
-            <td><%= pre.year %></td>
-            <td><%= pre.make_model %></td>
-            <td><%= pre.original_assign %></td>
-            <td><%= pre.second_assign %></td>
-            <td><%= pre.third_assign %></td>
-            <td><%= pre.notes %></td>
-            <td><a href=<%= pre.img_link %> target="_blank"><%= pre.caption %></a>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container series-head">
+    <h1>Before The Shop Numbers</h1>
+    <p>The CFD began purchasing motorized apparatus in earnest in 1911. Many of these early vehicles didn't last long enough to receive a brass plaque with shop number in early 1923. Numbering on this page comes from the excellent Ken Little/John McNalis History of Chicago Firehouses (volumes I - IV).</p>
   </div>
-</div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-stripe">
+        <thead class="thead-inverse ">
+          <tr class="row-head">
+            <th scope="col">Shop &#35</th>
+            <th scope="col">Year</th>
+            <th scope="col">Make&#47Model</th>
+            <th scope="col">Original Assignment</th>
+            <th scope="col">Second Assignment</th>
+            <th scope="col">Third Assignment</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Image Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @pres.each do |pre| %>
+            <tr>
+              <th scope="row"><a href="/pre-shop/<%= pre.id %>"><%= pre.shop_num %></a></th>
+              <td><%= pre.year %></td>
+              <td><%= pre.make_model %></td>
+              <td><%= pre.original_assign %></td>
+              <td><%= pre.second_assign %></td>
+              <td><%= pre.third_assign %></td>
+              <td><%= pre.notes %></td>
+              <td><a href=<%= pre.img_link %> target="_blank"><%= pre.caption %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

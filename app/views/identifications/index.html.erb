@@ -1,64 +1,79 @@
-<meta name="format-detection" content="telephone=no">
-<div class="container series-head">
-  <h1>Unidentified Shop Numbers</h1>
-  <p>The hunt continues.</p>
-</div>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse ">
-        <tr class="row-head">
-          <th scope="col" class="id">ID</th>
-          <th scope="col">Shop &#35</th>
-          <th scope="col">Year</th>
-          <th scope="col">Make&#47Model</th>
-          <th scope="col">Original Assignment</th>
-          <th scope="col">Second Assignment</th>
-          <th scope="col">Notes</th>
-          <th scope="col">Image Links</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @identifications.each do |identification| %>
-          <tr>
-            <th scope="row"><%= identification.id %></th>
-            <th><%= identification.shop_num %></th>
-            <td><%= identification.year %></td>
-            <td><%= identification.make_model %></td>
-            <td><%= identification.original_assign %></td>
-            <td><%= identification.second_assign %></td>
-            <td><%= identification.notes %></td>
-            <td><a href=<%= identification.img_link %> target="_blank"><%= identification.caption %></a>
-              <a href=<%= identification.img_link_two %> target="_blank"><%= identification.caption_two %></a>
-              <a href=<%= identification.img_link_three %> target="_blank"><%= identification.caption_three %></a>
-            </td>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container series-head">
+    <h1>Unidentified Shop Numbers</h1>
+    <p>The hunt continues.</p>
+  </div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-stripe">
+        <thead class="thead-inverse ">
+          <tr class="row-head">
+            <th scope="col" class="id">ID</th>
+            <th scope="col">Shop &#35</th>
+            <th scope="col">Year</th>
+            <th scope="col">Make&#47Model</th>
+            <th scope="col">Original Assignment</th>
+            <th scope="col">Second Assignment</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Image Links</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <div class="form">
-      <div class="form-header">
-        <h3>Identification Form</h3>
-        <p>I need your help! If you have any information about the vehicles listed above&mdash;or anything else, for that matter&mdash;tell me about it using this form.</p>
-      </div>
-      <%= form_tag 'https://formspree.io/eric.j.biel@gmail.com', class: 'form-group' do%>
-        Email <%= text_field_tag 'email', '', class: 'form-control' %></br>
-        Subject <%= text_field_tag 'subject', '', class: 'form-control' %></br>
-        About </br>
-        <%= check_box_tag :gen_info, class: 'form-check-input' %>
-        <%= label_tag :gen_info, 'General info', class: 'form-check' %></br>
-        <%= check_box_tag :listed_id, class: 'form-check-input' %>
-        <%= label_tag :listed_id, 'ID of listed vehicle', class: 'form-check' %></br>
-        <%= check_box_tag :unlisted_id, class: 'form-check-input' %>
-        <%= label_tag :unlisted_id, 'ID of another vehicle', class: 'form-check' %></br>
-      </br>
-        Related to line item: </br> <%= collection_select :id, :identification_id, Identification.all.order(id: :asc), :id, :id_dropdown, prompt: true %></br>
-      </br>
-        Description </br><%= text_area_tag :description, '', size: '24x6', class: 'form-control'%></br>
-        <div class="submit">
-          <%= submit_tag "submit",:value => "submit", class: 'btn btn-primary'%>
+        </thead>
+        <tbody>
+          <% @identifications.each do |identification| %>
+            <tr>
+              <th scope="row"><%= identification.id %></th>
+              <th><%= identification.shop_num %></th>
+              <td><%= identification.year %></td>
+              <td><%= identification.make_model %></td>
+              <td><%= identification.original_assign %></td>
+              <td><%= identification.second_assign %></td>
+              <td><%= identification.notes %></td>
+              <td><a href=<%= identification.img_link %> target="_blank"><%= identification.caption %></a>
+                <a href=<%= identification.img_link_two %> target="_blank"><%= identification.caption_two %></a>
+                <a href=<%= identification.img_link_three %> target="_blank"><%= identification.caption_three %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="form">
+        <div class="form-header">
+          <h3>Identification Form</h3>
+          <p>I need your help! If you have any information about the vehicles listed above&mdash;or anything else, for that matter&mdash;tell me about it using this form.</p>
         </div>
-      <%end%>
+        <%= form_tag 'https://formspree.io/eric.j.biel@gmail.com', class: 'form-group' do%>
+          Email <%= text_field_tag 'email', '', class: 'form-control' %></br>
+          Subject <%= text_field_tag 'subject', '', class: 'form-control' %></br>
+          About </br>
+          <%= check_box_tag :gen_info, class: 'form-check-input' %>
+          <%= label_tag :gen_info, 'General info', class: 'form-check' %></br>
+          <%= check_box_tag :listed_id, class: 'form-check-input' %>
+          <%= label_tag :listed_id, 'ID of listed vehicle', class: 'form-check' %></br>
+          <%= check_box_tag :unlisted_id, class: 'form-check-input' %>
+          <%= label_tag :unlisted_id, 'ID of another vehicle', class: 'form-check' %></br>
+        </br>
+          Related to line item: </br> <%= collection_select :id, :identification_id, Identification.all.order(id: :asc), :id, :id_dropdown, prompt: true %></br>
+        </br>
+          Description </br><%= text_area_tag :description, '', size: '24x6', class: 'form-control'%></br>
+          <div class="submit">
+            <%= submit_tag "submit",:value => "submit", class: 'btn btn-primary'%>
+          </div>
+        <%end%>
+      </div>
     </div>
   </div>
-</div>
+</body>

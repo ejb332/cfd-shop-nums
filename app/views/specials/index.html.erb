@@ -1,48 +1,63 @@
-<meta name="format-detection" content="telephone=no">
-<div class="container series-head">
-  <h1>CFD G-series</h1>
-  <p>The G-series is the CFD's catch-all class of numbering for special apparatus. The first nine numbers were reserved for current and future fireboat purchases, though G-8 and G-9 have never been used and subsequent fireboats have used chronological G- numbering. Passenger car-based and early modular ambulances used the G-series until 1979, when they were moved to the moribund C-series.</p>
-</div>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse ">
-        <tr class="row-head">
-          <th scope="col" class="shop">Shop &#35</th>
-          <th scope="col" class="year">Year</th>
-          <th scope="col">Make&#47Model</th>
-          <th scope="col">Original Assignment</th>
-          <th scope="col">Second Assignment</th>
-          <th scope="col">Third Assignment</th>
-          <th scope="col">Photos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @specials.each do |special| %>
-          <tr>
-            <th scope="row" class="shop"><a href="/g-series/<%= special.id %>"><%= special.shop_num %></a></a></th>
-            <td class="year"><%= special.year %></td>
-            <td><%= special.make_model %></td>
-            <td><%= special.original_assign %></td>
-            <td><%= special.second_assign %></td>
-            <td><%= special.third_assign %></td>
-            <td><a href=<%= special.img_link %> target="_blank"><%= special.caption %></a>
-              <a href=<%= special.img_link_two %> target="_blank"><%= special.caption_two %></a>
-              <a href=<%= special.img_link_three %> target="_blank"><%= special.caption_three %></a>
-              <a href=<%= special.img_link_four %> target="_blank"><%= special.caption_four %></a>
-              <a href=<%= special.img_link_five %> target="_blank"><%= special.caption_five %></a>
-              <a href=<%= special.img_link_six %> target="_blank"><%= special.caption_six %></a>
-              <a href=<%= special.img_link_seven %> target="_blank"><%= special.caption_seven %></a>
-              <a href=<%= special.img_link_eight %> target="_blank"><%= special.caption_eight %></a>
-              <a href=<%= special.img_link_nine %> target="_blank"><%= special.caption_nine %></a>
-              <a href=<%= special.img_link_ten %> target="_blank"><%= special.caption_ten %></a>
-              <a href=<%= special.img_link_eleven %> target="_blank"><%= special.caption_eleven %></a>
-              <a href=<%= special.img_link_twelve %> target="_blank"><%= special.caption_twelve %></a>
-              <a href=<%= special.img_link_thirteen %> target="_blank"><%= special.caption_thirteen %></a>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container series-head">
+    <h1>CFD G-series</h1>
+    <p>The G-series is the CFD's catch-all class of numbering for special apparatus. The first nine numbers were reserved for current and future fireboat purchases, though G-8 and G-9 have never been used and subsequent fireboats have used chronological G- numbering. Passenger car-based and early modular ambulances used the G-series until 1979, when they were moved to the moribund C-series.</p>
   </div>
-</div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-stripe">
+        <thead class="thead-inverse ">
+          <tr class="row-head">
+            <th scope="col" class="shop">Shop &#35</th>
+            <th scope="col" class="year">Year</th>
+            <th scope="col">Make&#47Model</th>
+            <th scope="col">Original Assignment</th>
+            <th scope="col">Second Assignment</th>
+            <th scope="col">Third Assignment</th>
+            <th scope="col">Photos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @specials.each do |special| %>
+            <tr>
+              <th scope="row" class="shop"><a href="/g-series/<%= special.id %>"><%= special.shop_num %></a></a></th>
+              <td class="year"><%= special.year %></td>
+              <td><%= special.make_model %></td>
+              <td><%= special.original_assign %></td>
+              <td><%= special.second_assign %></td>
+              <td><%= special.third_assign %></td>
+              <td><a href=<%= special.img_link %> target="_blank"><%= special.caption %></a>
+                <a href=<%= special.img_link_two %> target="_blank"><%= special.caption_two %></a>
+                <a href=<%= special.img_link_three %> target="_blank"><%= special.caption_three %></a>
+                <a href=<%= special.img_link_four %> target="_blank"><%= special.caption_four %></a>
+                <a href=<%= special.img_link_five %> target="_blank"><%= special.caption_five %></a>
+                <a href=<%= special.img_link_six %> target="_blank"><%= special.caption_six %></a>
+                <a href=<%= special.img_link_seven %> target="_blank"><%= special.caption_seven %></a>
+                <a href=<%= special.img_link_eight %> target="_blank"><%= special.caption_eight %></a>
+                <a href=<%= special.img_link_nine %> target="_blank"><%= special.caption_nine %></a>
+                <a href=<%= special.img_link_ten %> target="_blank"><%= special.caption_ten %></a>
+                <a href=<%= special.img_link_eleven %> target="_blank"><%= special.caption_eleven %></a>
+                <a href=<%= special.img_link_twelve %> target="_blank"><%= special.caption_twelve %></a>
+                <a href=<%= special.img_link_thirteen %> target="_blank"><%= special.caption_thirteen %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

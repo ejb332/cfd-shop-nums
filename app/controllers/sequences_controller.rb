@@ -38,10 +38,34 @@ class SequencesController < ApplicationController
     sequence28 = Sequence.select('company, signature, twenty_eighth_rig_shop_num AS "shop_num", twenty_eighth AS "rig"').where('twenty_eighth_rig_dates @> date ?', "#{search_term}")
     sequence29 = Sequence.select('company, signature, twenty_ninth_rig_shop_num AS "shop_num", twenty_ninth AS "rig"').where('twenty_ninth_rig_dates @> date ?', "#{search_term}")
     sequence30 = Sequence.select('company, signature, thirtieth_rig_shop_num AS "shop_num", thirtieth AS "rig"').where('thirtieth_rig_dates @> date ?', "#{search_term}")
+    sequence31 = Sequence.select('company, signature, thirty_first_rig_shop_num AS "shop_num", thirty_first AS "rig"').where('thirty_first_rig_dates @> date ?', "#{search_term}")
+    sequence32 = Sequence.select('company, signature, thirty_second_rig_shop_num AS "shop_num", thirty_second AS "rig"').where('thirty_second_rig_dates @> date ?', "#{search_term}")
+    sequence33 = Sequence.select('company, signature, thirty_third_rig_shop_num AS "shop_num", thirty_third AS "rig"').where('thirty_third_rig_dates @> date ?', "#{search_term}")
+    sequence34 = Sequence.select('company, signature, thirty_fourth_rig_shop_num AS "shop_num", thirty_fourth AS "rig"').where('thirty_fourth_rig_dates @> date ?', "#{search_term}")
+    sequence35 = Sequence.select('company, signature, thirty_fifth_rig_shop_num AS "shop_num", thirty_fifth AS "rig"').where('thirty_fifth_rig_dates @> date ?', "#{search_term}")
+    sequence36 = Sequence.select('company, signature, thirty_sixth_rig_shop_num AS "shop_num", thirty_sixth AS "rig"').where('thirty_sixth_rig_dates @> date ?', "#{search_term}")
+    sequence37 = Sequence.select('company, signature, thirty_seventh_rig_shop_num AS "shop_num", thirty_seventh AS "rig"').where('thirty_seventh_rig_dates @> date ?', "#{search_term}")
+    sequence38 = Sequence.select('company, signature, thirty_eighth_rig_shop_num AS "shop_num", thirty_eighth AS "rig"').where('thirty_eighth_rig_dates @> date ?', "#{search_term}")
+    sequence39 = Sequence.select('company, signature, thirty_ninth_rig_shop_num AS "shop_num", thirty_ninth AS "rig"').where('thirty_ninth_rig_dates @> date ?', "#{search_term}")
+    sequence40 = Sequence.select('company, signature, fortieth_rig_shop_num AS "shop_num", fortieth AS "rig"').where('fortieth_rig_dates @> date ?', "#{search_term}")
+    sequence41 = Sequence.select('company, signature, forty_first_rig_shop_num AS "shop_num", forty_first AS "rig"').where('forty_first_rig_dates @> date ?', "#{search_term}")
+    sequence42 = Sequence.select('company, signature, forty_second_rig_shop_num AS "shop_num", forty_second AS "rig"').where('forty_second_rig_dates @> date ?', "#{search_term}")
+    sequence43 = Sequence.select('company, signature, forty_third_rig_shop_num AS "shop_num", forty_third AS "rig"').where('forty_third_rig_dates @> date ?', "#{search_term}")
+    sequence44 = Sequence.select('company, signature, forty_fourth_rig_shop_num AS "shop_num", forty_fourth AS "rig"').where('forty_fourth_rig_dates @> date ?', "#{search_term}")
+    sequence45 = Sequence.select('company, signature, forty_fifth_rig_shop_num AS "shop_num", forty_fifth AS "rig"').where('forty_fifth_rig_dates @> date ?', "#{search_term}")
+    sequence46 = Sequence.select('company, signature, forty_sixth_rig_shop_num AS "shop_num", forty_sixth AS "rig"').where('forty_sixth_rig_dates @> date ?', "#{search_term}")
+    sequence47 = Sequence.select('company, signature, forty_seventh_rig_shop_num AS "shop_num", forty_seventh AS "rig"').where('forty_seventh_rig_dates @> date ?', "#{search_term}")
+    sequence48 = Sequence.select('company, signature, forty_eighth_rig_shop_num AS "shop_num", forty_eighth AS "rig"').where('forty_eighth_rig_dates @> date ?', "#{search_term}")
+    sequence49 = Sequence.select('company, signature, forty_ninth_rig_shop_num AS "shop_num", forty_ninth AS "rig"').where('forty_ninth_rig_dates @> date ?', "#{search_term}")
+    sequence50 = Sequence.select('company, signature, fiftieth_rig_shop_num AS "shop_num", fiftieth AS "rig"').where('fiftieth_rig_dates @> date ?', "#{search_term}")
 
-    all_results = sequence1 + sequence2 + sequence3 + sequence4 + sequence5 + sequence6 + sequence7 + sequence8 + sequence9 + sequence10 + sequence11 + sequence12 + sequence13 + sequence14 + sequence15 + sequence16 + sequence17 + sequence18 + sequence19 + sequence20 + sequence21 + sequence22 + sequence23 + sequence24 + sequence25 + sequence26 + sequence27 + sequence28 + sequence29 + sequence30
+    all_results = sequence1 + sequence2 + sequence3 + sequence4 + sequence5 + sequence6 + sequence7 + sequence8 + sequence9 + sequence10 + sequence11 + sequence12 + sequence13 + sequence14 + sequence15 + sequence16 + sequence17 + sequence18 + sequence19 + sequence20 + sequence21 + sequence22 + sequence23 + sequence24 + sequence25 + sequence26 + sequence27 + sequence28 + sequence29 + sequence30 + sequence31 + sequence32 + sequence33 + sequence34 +sequence35 + sequence36 + sequence37 + sequence38 + sequence39 + sequence40 + sequence41 + sequence42 + sequence43 + sequence44 + sequence45 + sequence46 + sequence47 + sequence48 + sequence49 + sequence50
 
-    @search_results = all_results.reverse!
+    @search_results = all_results.sort_by(&:signature)
+    # sort_by(&:signature)
+    # sort_by { |s| s[:signature] }
+    # sort {|a, b| a[:signature] <=> b[:signature]}
+    # needs refining, but better than random
 
     # @search_results = Sequence.where('first_rig_dates @> date ?', "#{search_term}")
     #     .or(Sequence.where('second_rig_dates @> date ?', "#{search_term}"))

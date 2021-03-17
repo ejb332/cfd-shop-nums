@@ -41,6 +41,7 @@ gem 'nokogiri', '>= 1.10.4'
 gem 'rack', '>= 2.0.6'
 gem 'loofah', '>= 2.2.3'
 gem 'execute_sql'
+gem 'active_record_union'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

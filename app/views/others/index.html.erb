@@ -1,38 +1,53 @@
-<meta name="format-detection" content="telephone=no">
-<div class="container series-head">
-  <h1>CFD S-series</h1>
-  <p>The S-series is a bit of an anomaly. The original S- series (pre-2000) seems to have been mostly vehicles acquired from other city departments. The current S- numbered vehicles are typically small (electric carts, off-road utility vehicles, Segways), though some are pedal-powered, and some are buses.</p>
-</div>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse ">
-        <tr class="row-head">
-          <th scope="col" class="shop">Shop &#35</th>
-          <th scope="col" class="year">Year</th>
-          <th scope="col">Make&#47Model</th>
-          <th scope="col">Original Assignment</th>
-          <th scope="col">Second Assignment</th>
-          <th scope="col">Third Assignment</th>
-          <th scope="col">Image Links</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @others.each do |other| %>
-          <tr>
-            <th scope="row" class="shop"><a href="/s-series/<%= other.id %>"><%= other.shop_num %></a></th>
-            <td class="year"><%= other.year %></td>
-            <td><%= other.make_model %></td>
-            <td><%= other.original_assign %></td>
-            <td><%= other.second_assign %></td>
-            <td><%= other.third_assign %></td>
-            <td><a href=<%= other.img_link %> target="_blank"><%= other.caption %></a>
-              <a href=<%= other.img_link_two %> target="_blank"><%= other.caption_two %></a>
-              <a href=<%= other.img_link_three %> target="_blank"><%= other.caption_three %></a>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container series-head">
+    <h1>CFD S-series</h1>
+    <p>The S-series is a bit of an anomaly. The original S- series (pre-2000) seems to have been mostly vehicles acquired from other city departments. The current S- numbered vehicles are typically small (electric carts, off-road utility vehicles, Segways), though some are pedal-powered, and some are buses.</p>
   </div>
-</div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-stripe">
+        <thead class="thead-inverse ">
+          <tr class="row-head">
+            <th scope="col" class="shop">Shop &#35</th>
+            <th scope="col" class="year">Year</th>
+            <th scope="col">Make&#47Model</th>
+            <th scope="col">Original Assignment</th>
+            <th scope="col">Second Assignment</th>
+            <th scope="col">Third Assignment</th>
+            <th scope="col">Image Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @others.each do |other| %>
+            <tr>
+              <th scope="row" class="shop"><a href="/s-series/<%= other.id %>"><%= other.shop_num %></a></th>
+              <td class="year"><%= other.year %></td>
+              <td><%= other.make_model %></td>
+              <td><%= other.original_assign %></td>
+              <td><%= other.second_assign %></td>
+              <td><%= other.third_assign %></td>
+              <td><a href=<%= other.img_link %> target="_blank"><%= other.caption %></a>
+                <a href=<%= other.img_link_two %> target="_blank"><%= other.caption_two %></a>
+                <a href=<%= other.img_link_three %> target="_blank"><%= other.caption_three %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

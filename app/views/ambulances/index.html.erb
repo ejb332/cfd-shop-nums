@@ -1,40 +1,55 @@
-<meta name="format-detection" content="telephone=no">
-<div class="container series-head">
-  <h1>CFD C-series</h1>
-  <p>The C-series was created to inventory squad apparatus. The original squads were dissolved in the late 1960s and the series was not used again until 1979. Ambulances, which had previously fallen under the catch-all G-series, were transferred to the C-series and have remained ever since. One additional note: in order to satisfy state license plate requirements, the numbering jumped from C-104 to C-700 in 1983. </p>
-</div>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse ">
-        <tr class="row-head">
-          <th scope="col" class="shop">Shop &#35</th>
-          <th scope="col" class="year">Year</th>
-          <th scope="col">Make&#47Model</th>
-          <th scope="col">Original Assignment</th>
-          <th scope="col">Second Assignment</th>
-          <th scope="col">Third Assignment</th>
-          <th scope="col">Image Links</th>
-        </tr>
-      <tbody>
-      </thead>
-        <% @ambulances.each do |ambulance| %>
-          <% next if ambulance.id > 104 && ambulance.id < 700 %>
-          <tr>
-            <th scope="row" class="shop"><a href="/c-series/<%= ambulance.id %>"><%= ambulance.shop_num %></a></th>
-            <td class="year"><%= ambulance.year %></td>
-            <td><%= ambulance.make_model %></td>
-            <td><%= ambulance.original_assign %></td>
-            <td><%= ambulance.second_assign %></td>
-            <td><%= ambulance.third_assign %></td>
-            <td><a href=<%= ambulance.img_link %> target="_blank"><%= ambulance.caption %></a>
-              <a href=<%= ambulance.img_link_two %> target="_blank"><%= ambulance.caption_two %></a>
-              <a href=<%= ambulance.img_link_three %> target="_blank"><%= ambulance.caption_three %></a>
-              <a href=<%= ambulance.img_link_four %> target="_blank"><%= ambulance.caption_four %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container series-head">
+    <h1>CFD C-series</h1>
+    <p>The C-series was created to inventory squad apparatus. The original squads were dissolved in the late 1960s and the series was not used again until 1979. Ambulances, which had previously fallen under the catch-all G-series, were transferred to the C-series and have remained ever since. One additional note: in order to satisfy state license plate requirements, the numbering jumped from C-104 to C-700 in 1983. </p>
   </div>
-</div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-stripe">
+        <thead class="thead-inverse ">
+          <tr class="row-head">
+            <th scope="col" class="shop">Shop &#35</th>
+            <th scope="col" class="year">Year</th>
+            <th scope="col">Make&#47Model</th>
+            <th scope="col">Original Assignment</th>
+            <th scope="col">Second Assignment</th>
+            <th scope="col">Third Assignment</th>
+            <th scope="col">Image Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @ambulances.each do |ambulance| %>
+            <% next if ambulance.id > 104 && ambulance.id < 700 %>
+            <tr>
+              <th scope="row" class="shop"><a href="/c-series/<%= ambulance.id %>"><%= ambulance.shop_num %></a></th>
+              <td class="year"><%= ambulance.year %></td>
+              <td><%= ambulance.make_model %></td>
+              <td><%= ambulance.original_assign %></td>
+              <td><%= ambulance.second_assign %></td>
+              <td><%= ambulance.third_assign %></td>
+              <td><a href=<%= ambulance.img_link %> target="_blank"><%= ambulance.caption %></a>
+                <a href=<%= ambulance.img_link_two %> target="_blank"><%= ambulance.caption_two %></a>
+                <a href=<%= ambulance.img_link_three %> target="_blank"><%= ambulance.caption_three %></a>
+                <a href=<%= ambulance.img_link_four %> target="_blank"><%= ambulance.caption_four %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

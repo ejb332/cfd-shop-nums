@@ -1,38 +1,53 @@
-<meta name="format-detection" content="telephone=no">
-<div class="container series-head">
-  <h1>Chicago Fire Insurance Patrol (1871-1959)</h1>
-  <p>Like the CFD, the FIP used a consistent shop numbering series to keep track of their vehicles. Coincidentally, they too used a B- prefix.</p>
-</div>
-<div>
-</div>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse ">
-        <tr class="row-head">
-          <th scope="col">Shop &#35</th>
-          <th scope="col">Year</th>
-          <th scope="col">Make&#47Model</th>
-          <th scope="col">Original Assignment</th>
-          <th scope="col">Second Assignment</th>
-          <th scope="col">Notes</th>
-          <th scope="col">Image Links</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @insurances.each do |insurance| %>
-          <tr>
-            <th scope="row"><%= insurance.shop_num %></th>
-            <td><%= insurance.year %></td>
-            <td><%= insurance.make_model %></td>
-            <td><%= insurance.original_assign %></td>
-            <td><%= insurance.second_assign %></td>
-            <td><%= insurance.notes %></td>
-            <td><a href=<%= insurance.img_link %> target="_blank"><%= insurance.caption %></a>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container series-head">
+    <h1>Chicago Fire Insurance Patrol (1871-1959)</h1>
+    <p>Like the CFD, the FIP used a consistent shop numbering series to keep track of their vehicles. Coincidentally, they too used a B- prefix.</p>
   </div>
-</div>
+  <div>
+  </div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-stripe">
+        <thead class="thead-inverse ">
+          <tr class="row-head">
+            <th scope="col">Shop &#35</th>
+            <th scope="col">Year</th>
+            <th scope="col">Make&#47Model</th>
+            <th scope="col">Original Assignment</th>
+            <th scope="col">Second Assignment</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Image Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @insurances.each do |insurance| %>
+            <tr>
+              <th scope="row"><%= insurance.shop_num %></th>
+              <td><%= insurance.year %></td>
+              <td><%= insurance.make_model %></td>
+              <td><%= insurance.original_assign %></td>
+              <td><%= insurance.second_assign %></td>
+              <td><%= insurance.notes %></td>
+              <td><a href=<%= insurance.img_link %> target="_blank"><%= insurance.caption %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

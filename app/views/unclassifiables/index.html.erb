@@ -1,38 +1,53 @@
-<meta name="format-detection" content="telephone=no">
-<div class="container series-head">
-  <h1>Mixed Bag</h1>
-  <p>Everything else: outboard boat motors, trailer-mounted pumps, one-offs, and the 5-11 Club.</p>
-</div>
-<div class="container">
-  <div class="table-responsive">
-    <table class="table table-stripe">
-      <thead class="thead-inverse ">
-        <tr class="row-head">
-          <th scope="col">Shop &#35</th>
-          <th scope="col">Year</th>
-          <th scope="col">Make&#47Model</th>
-          <th scope="col">Original Assignment</th>
-          <th scope="col">Second Assignment</th>
-          <th scope="col">Notes</th>
-          <th scope="col">Image Links</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @unclassifiables.each do |unclassifiable| %>
-          <tr>
-            <th scope="row"><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.shop_num %></a></th>
-            <td><%= unclassifiable.year %></td>
-            <td><%= unclassifiable.make_model %></td>
-            <td><%= unclassifiable.original_assign %></td>
-            <td><%= unclassifiable.second_assign %></td>
-            <td><%= unclassifiable.notes %></td>
-            <td><a href=<%= unclassifiable.img_link %> target="_blank"><%= unclassifiable.caption %></a>
-              <a href=<%= unclassifiable.img_link_two %> target="_blank"><%= unclassifiable.caption_two %></a>
-              <a href=<%= unclassifiable.img_link_three %> target="_blank"><%= unclassifiable.caption_three %></a>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQN4WV8');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQN4WV8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container series-head">
+    <h1>Mixed Bag</h1>
+    <p>Everything else: outboard boat motors, trailer-mounted pumps, one-offs, and the 5-11 Club.</p>
   </div>
-</div>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table table-stripe">
+        <thead class="thead-inverse ">
+          <tr class="row-head">
+            <th scope="col">Shop &#35</th>
+            <th scope="col">Year</th>
+            <th scope="col">Make&#47Model</th>
+            <th scope="col">Original Assignment</th>
+            <th scope="col">Second Assignment</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Image Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @unclassifiables.each do |unclassifiable| %>
+            <tr>
+              <th scope="row"><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.shop_num %></a></th>
+              <td><%= unclassifiable.year %></td>
+              <td><%= unclassifiable.make_model %></td>
+              <td><%= unclassifiable.original_assign %></td>
+              <td><%= unclassifiable.second_assign %></td>
+              <td><%= unclassifiable.notes %></td>
+              <td><a href=<%= unclassifiable.img_link %> target="_blank"><%= unclassifiable.caption %></a>
+                <a href=<%= unclassifiable.img_link_two %> target="_blank"><%= unclassifiable.caption_two %></a>
+                <a href=<%= unclassifiable.img_link_three %> target="_blank"><%= unclassifiable.caption_three %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
