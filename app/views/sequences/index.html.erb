@@ -17,7 +17,7 @@
   </div>
     <p> A (mostly) complete listing of Chicago Fire Department companies, current and disbanded, assigned motorized apparatus.</p>
   <div>
-    <p id="search-query">Search by a specific date for a listing of all apparatus in service at that time.</p>
+    <p>Search by a specific date for a listing of all apparatus in service at that time.</p>
     <div class="col-12 text-center">
       <%= form_tag "/search_co", method: :post do %>
         <%= date_field_tag :search, :required => 'required' %>
@@ -33,9 +33,8 @@
             <tr class="row-head">
               <th scope="col">Designation</th>
               <th scope="col">Signature*</th>
-              <th scope="col">Organization Date</th>
-              <th scope="col">Motorization Date</th>
-              <th scope="col">Disbanded</th>
+              <th scope="col">Organized</th>
+              <th scope="col">Motorized</th>
               <th scope="col">Transfer Date</th>
               <th scope="col">New Signature</th>
             </tr>
@@ -53,17 +52,16 @@
                 <% else %>
                   <td><%= " " %></td>
                 <% end %>
-                <% if sequence.disbanded_date? %>
-                  <td><%= pretty_date(sequence.disbanded_date) %></td>
-                <% else %>
-                  <td><%= " " %></td>
-                <% end %>
                 <% if sequence.transfer_date? %>
                   <td><%= pretty_date(sequence.transfer_date) %></td>
                   <% else %>
                   <td><%= " " %></td>
                 <% end %>
-                <td><%= sequence.transfer_signature %></td>
+                <% if sequence.transfer_signature? %>
+                  <td><%= sequence.transfer_signature %></td>
+                  <% else %>
+                  <td><%= " " %></td>
+                <% end %>
               </tr>
             <% end %>
           </tbody>
