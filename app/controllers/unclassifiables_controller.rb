@@ -1,6 +1,6 @@
 class UnclassifiablesController < ApplicationController
   def index
-    @unclassifiables = Unclassifiable.all.order(id: :asc)
+    @unclassifiables = Unclassifiable.all.order(shop_num: :asc, year: :asc)
     render 'index.html.erb'
   end
 
