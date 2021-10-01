@@ -35,11 +35,11 @@
           <% @specials.each do |special| %>
             <tr>
               <th scope="row" class="shop"><a href="/g-series/<%= special.id %>"><%= special.shop_num %></a></a></th>
-              <td class="year"><%= special.year %></td>
-              <td><%= special.make_model %></td>
-              <td><%= special.original_assign %></td>
-              <td><%= special.second_assign %></td>
-              <td><%= special.third_assign %></td>
+              <td class="year"><a href="/g-series/<%= special.id %>"><%= special.year %></a></td>
+              <td><a href="/g-series/<%= special.id %>"><%= special.make_model %></a></td>
+              <td><a href="/g-series/<%= special.id %>"><%= special.original_assign %></a></td>
+              <td><a href="/g-series/<%= special.id %>"><%= special.second_assign %></a></td>
+              <td><a href="/g-series/<%= special.id %>"><%= special.third_assign %></a></td>
               <td><a href=<%= special.img_link %> target="_blank"><%= special.caption %></a>
                 <a href=<%= special.img_link_two %> target="_blank"><%= special.caption_two %></a>
                 <a href=<%= special.img_link_three %> target="_blank"><%= special.caption_three %></a>

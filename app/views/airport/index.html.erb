@@ -35,11 +35,11 @@
           <% @airports.each do |airport| %>
             <tr>
               <th scope="row" class="shop"><a href="/avf-series/<%= airport.id %>"><%= airport.shop_num %></a></th>
-              <td class="year"><%= airport.year %></td>
-              <td><%= airport.make_model %></td>
-              <td><%= airport.original_assign %></td>
-              <td><%= airport.second_assign %></td>
-              <td><%= airport.third_assign %></td>
+              <td class="year"><a href="/avf-series/<%= airport.id %>"><%= airport.year %></a></td>
+              <td><a href="/avf-series/<%= airport.id %>"><%= airport.make_model %></a></td>
+              <td><a href="/avf-series/<%= airport.id %>"><%= airport.original_assign %></a></td>
+              <td><a href="/avf-series/<%= airport.id %>"><%= airport.second_assign %></a></td>
+              <td><a href="/avf-series/<%= airport.id %>"><%= airport.third_assign %></a></td>
               <td><a href=<%= airport.img_link %> target="_blank"><%= airport.caption %></a>
                 <a href=<%= airport.img_link_two %> target="_blank"><%= airport.caption_two %></a>
                 <a href=<%= airport.img_link_three %> target="_blank"><%= airport.caption_three %></a>

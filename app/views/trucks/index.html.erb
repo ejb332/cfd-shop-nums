@@ -36,11 +36,11 @@
           <% next if truck.id > 371 %>
             <tr>
               <th scope="row" class="shop"><a href="/e-series/<%= truck.id %>"><%= truck.shop_num %></a></th>
-              <td class="year"><%= truck.year %></td>
-              <td><%= truck.make_model %></td>
-              <td><%= truck.original_assign %></td>
-              <td><%= truck.second_assign %></td>
-              <td><%= truck.third_assign %></td>
+              <td class="year"><a href="/e-series/<%= truck.id %>"><%= truck.year %></a></td>
+              <td><a href="/e-series/<%= truck.id %>"><%= truck.make_model %></a></td>
+              <td><a href="/e-series/<%= truck.id %>"><%= truck.original_assign %></a></td>
+              <td><a href="/e-series/<%= truck.id %>"><%= truck.second_assign %></a></td>
+              <td><a href="/e-series/<%= truck.id %>"><%= truck.third_assign %></a></td>
               <td><a href=<%= truck.img_link %> target="_blank"><%= truck.caption %></a>
                 <a href=<%= truck.img_link_two %> target="_blank"><%= truck.caption_two %></a>
                 <a href=<%= truck.img_link_three %> target="_blank"><%= truck.caption_three %></a>

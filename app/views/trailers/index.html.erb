@@ -35,11 +35,11 @@
           <% @trailers.each do |trailer| %>
             <tr>
               <th scope="row" class="shop"><a href="/f-series/<%= trailer.id %>"><%= trailer.shop_num %></a></th>
-              <td class="year"><%= trailer.year %></td>
-              <td><%= trailer.make_model %></td>
-              <td><%= trailer.original_assign %></td>
-              <td><%= trailer.second_assign %></td>
-              <td><%= trailer.third_assign %></td>
+              <td class="year"><a href="/f-series/<%= trailer.id %>"><%= trailer.year %></a></td>
+              <td><a href="/f-series/<%= trailer.id %>"><%= trailer.make_model %></a></td>
+              <td><a href="/f-series/<%= trailer.id %>"><%= trailer.original_assign %></a></td>
+              <td><a href="/f-series/<%= trailer.id %>"><%= trailer.second_assign %></a></td>
+              <td><a href="/f-series/<%= trailer.id %>"><%= trailer.third_assign %></a></td>
               <td><a href=<%= trailer.img_link %> target="_blank"><%= trailer.caption %></a>
               </td>
             </tr>

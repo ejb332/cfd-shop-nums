@@ -36,11 +36,11 @@
           <% @suvs.each do |suv| %>
             <tr>
               <th scope="row" class="shop"><a href="/b-series/<%= suv.id %>"><%= suv.shop_num %></a></th>
-              <td class="year"><%= suv.year %></td>
-              <td><%= suv.make_model %></td>
-              <td><%= suv.original_assign %></td>
-              <td><%= suv.second_assign %></td>
-              <td><%= suv.third_assign %></td>
+              <td class="year"><a href="/b-series/<%= suv.id %>"><%= suv.year %></a></td>
+              <td><a href="/b-series/<%= suv.id %>"><%= suv.make_model %></a></td>
+              <td><a href="/b-series/<%= suv.id %>"><%= suv.original_assign %></a></td>
+              <td><a href="/b-series/<%= suv.id %>"><%= suv.second_assign %></a></td>
+              <td><a href="/b-series/<%= suv.id %>"><%= suv.third_assign %></a></td>
               <td><a href=<%= suv.img_link %> target="_blank"><%= suv.caption %></a>
                 <a href=<%= suv.img_link_two %> target="_blank"><%= suv.caption_two %></a>
                 <a href=<%= suv.img_link_three %> target="_blank"><%= suv.caption_three %></a>

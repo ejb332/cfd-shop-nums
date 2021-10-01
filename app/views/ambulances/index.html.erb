@@ -36,11 +36,11 @@
             <% next if ambulance.id > 104 && ambulance.id < 700 %>
             <tr>
               <th scope="row" class="shop"><a href="/c-series/<%= ambulance.id %>"><%= ambulance.shop_num %></a></th>
-              <td class="year"><%= ambulance.year %></td>
-              <td><%= ambulance.make_model %></td>
-              <td><%= ambulance.original_assign %></td>
-              <td><%= ambulance.second_assign %></td>
-              <td><%= ambulance.third_assign %></td>
+              <td class="year"><a href="/c-series/<%= ambulance.id %>"><%= ambulance.year %></a></td>
+              <td><a href="/c-series/<%= ambulance.id %>"><%= ambulance.make_model %></a></td>
+              <td><a href="/c-series/<%= ambulance.id %>"><%= ambulance.original_assign %></a></td>
+              <td><a href="/c-series/<%= ambulance.id %>"><%= ambulance.second_assign %></a></td>
+              <td><a href="/c-series/<%= ambulance.id %>"><%= ambulance.third_assign %></a></td>
               <td><a href=<%= ambulance.img_link %> target="_blank"><%= ambulance.caption %></a>
                 <a href=<%= ambulance.img_link_two %> target="_blank"><%= ambulance.caption_two %></a>
                 <a href=<%= ambulance.img_link_three %> target="_blank"><%= ambulance.caption_three %></a>

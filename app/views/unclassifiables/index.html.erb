@@ -35,11 +35,11 @@
           <% @unclassifiables.each do |unclassifiable| %>
             <tr>
               <th scope="row"><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.shop_num %></a></th>
-              <td><%= unclassifiable.year %></td>
-              <td><%= unclassifiable.make_model %></td>
-              <td><%= unclassifiable.original_assign %></td>
-              <td><%= unclassifiable.second_assign %></td>
-              <td><%= unclassifiable.notes %></td>
+              <td><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.year %></a></td>
+              <td><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.make_model %></a></td>
+              <td><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.original_assign %></a></td>
+              <td><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.second_assign %></a></td>
+              <td><a href="/unclassified/<%= unclassifiable.id %>"><%= unclassifiable.notes %></a></td>
               <td><a href=<%= unclassifiable.img_link %> target="_blank"><%= unclassifiable.caption %></a>
                 <a href=<%= unclassifiable.img_link_two %> target="_blank"><%= unclassifiable.caption_two %></a>
                 <a href=<%= unclassifiable.img_link_three %> target="_blank"><%= unclassifiable.caption_three %></a>
