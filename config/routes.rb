@@ -30,8 +30,8 @@ Rails.application.routes.draw do
   get '/pre-shop/:id' => 'pres#show'
   get '/unclassified' => 'unclassifiables#index'
   get '/unclassified/:id' => 'unclassifiables#show'
-  get '/company_history' => 'sequences#index'
-  get '/company_history/:id' => 'sequences#show'
+  get '/roster' => 'sequences#index'
+  get '/roster/:id' => 'sequences#show'
   post '/search' => 'mains#search_landing'
   post '/search_co' => 'sequences#search_co_landing'
 end
