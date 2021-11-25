@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'aws-sdk', '~> 2'
 # specific update calls for github security issues
 gem 'nokogiri', '>= 1.10.4'
-gem 'actionview', '>= 5.2.4.4'
+# gem 'actionview', '>= 5.2.4.4'
 gem 'rack', '>= 2.0.6'
 gem 'loofah', '>= 2.2.3'
 gem 'execute_sql'
